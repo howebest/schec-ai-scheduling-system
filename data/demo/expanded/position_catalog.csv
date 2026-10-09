@@ -1,0 +1,9 @@
+﻿position_id,position_name,position_category
+POS-FILL,灌注机岗,生产操作
+POS-BLOW,吹贴机岗,生产操作
+POS-ASEPTIC,无菌操作岗,生产操作
+POS-PALLET,码垛机岗,包装操作
+POS-PACK,塑包机岗,包装操作
+POS-QUALITY,质量抽检岗,质量管理
+POS-CHANGEOVER,换型操作岗,生产支持
+POS-LOGISTICS,物料配送岗,生产支持

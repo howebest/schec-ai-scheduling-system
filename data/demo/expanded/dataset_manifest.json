@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-demo-expanded-20261008-v1",
+  "dataset_version": "synthetic-demo-expanded-20261008-v1",
+  "display_name": "合成演示数据（人员与多方案扩充）",
+  "source_type": "synthetic_demo",
+  "provenance": "由固定种子和规则生成的本机合成数据；不含真实员工个人信息，不代表生产绩效。",
+  "seed": 20261008,
+  "planning_period_days": 14,
+  "planning_period": {
+    "start_date": "2026-10-01",
+    "end_date": "2026-10-14"
+  },
+  "counts": {
+    "lines": 6,
+    "employees": 132,
+    "new_employees": 96,
+    "teams": 42,
+    "new_teams": 24,
+    "positions": 8,
+    "skills": 12,
+    "employee_skill_relations": 546,
+    "scenarios": 12,
+    "schedule_artifacts": 12
+  },
+  "classification": {
+    "factory_code": {
+      "HB": "河北厂",
+      "SX": "陕西厂"
+    },
+    "line_type": {
+      "soda": "含气饮料线",
+      "aseptic": "无菌饮料线"
+    },
+    "source_type": {
+      "synthetic_demo": "合成演示数据"
+    },
+    "position_categories": [
+      "包装操作",
+      "生产操作",
+      "生产支持",
+      "质量管理"
+    ],
+    "skill_categories": [
+      "包装操作",
+      "协同管理",
+      "安全与合规",
+      "现场管理",
+      "生产支持",
+      "设备操作",
+      "设备维护",
+      "质量管理",
+      "食品安全"
+    ],
+    "comparison_groups": [
+      "baseline-demand",
+      "peak-demand"
+    ]
+  },
+  "relation_keys": {
+    "employees": "employee_id",
+    "teams": "team_id",
+    "positions": "position_id",
+    "skills": "skill_code",
+    "lines": "line_id",
+    "qualifications": "object_type + object_id + position_id + line_id",
+    "schedule_versions": "schedule_id + version",
+    "schedule_employee_link": "schedule assignment employee_id = employee_id"
+  },
+  "files": {
+    "catalog_expansion.json": {
+      "path": "data/demo/expanded/catalog_expansion.json",
+      "sha256": "39528fdcce4f0ddffe10c5dbe5e581bf66ffe663be00c79827b9c600492eb38a",
+      "row_count": null
+    },
+    "employee_skills.csv": {
+      "path": "data/demo/expanded/employee_skills.csv",
+      "sha256": "aee514d4a116bb844a85046fcc9be7d59a51ec082e9bc1cda77a800539a9c30d",
+      "row_count": 546
+    },
+    "employees.csv": {
+      "path": "data/demo/expanded/employees.csv",
+      "sha256": "63bfc7336bf17ec604f30955f3896cfe205845bfc57531fd411a163e79f3751f",
+      "row_count": 132
+    },
+    "line_catalog.csv": {
+      "path": "data/demo/expanded/line_catalog.csv",
+      "sha256": "249740a8292405fa4e9bd6a8d3866d495cee4c3f0357595c7074876f19b1d304",
+      "row_count": 6
+    },
+    "position_catalog.csv": {
+      "path": "data/demo/expanded/position_catalog.csv",
+      "sha256": "d840ea2c790c7fa7eaa79768a5e386ad1166e05c6919ed2f63d71f94b38d2848",
+      "row_count": 8
+    },
+    "scenario_catalog.csv": {
+      "path": "data/demo/expanded/scenario_catalog.csv",
+      "sha256": "dd9e8ebdc92cc47e9ddabb8bfe2b4651d3d0cf1a4d98e7e29fc46e69f7a47738",
+      "row_count": 12
+    },
+    "scenario_comparison_summary.csv": {
+      "path": "data/demo/expanded/scenario_comparison_summary.csv",
+      "sha256": "7313c96f99e2ef8ad03d0b4906e89cef15401c9e23df24b2180b946097b39df6",
+      "row_count": 12
+    },
+    "scenario_manifest.json": {
+      "path": "data/demo/expanded/scenario_manifest.json",
+      "sha256": "449ac3946d7615de6a913e7c948c8b9739a2b97e38fddc66ae9194c886403a29",
+      "row_count": null
+    },
+    "shift_catalog.csv": {
+      "path": "data/demo/expanded/shift_catalog.csv",
+      "sha256": "b03736a1372131ab2ebcf223e9c20279381983c045a6e4b2570f1ed29f94354a",
+      "row_count": 2
+    },
+    "skill_catalog.csv": {
+      "path": "data/demo/expanded/skill_catalog.csv",
+      "sha256": "e706ed0d2b3ace4e39a631dc7f9261cdfdb309d86d6145298dd6193052a5a327",
+      "row_count": 12
+    },
+    "teams.csv": {
+      "path": "data/demo/expanded/teams.csv",
+      "sha256": "0f4069f5880b8d4514ca1d9e410b4376b7e4066f7f257c0da29073572091d651",
+      "row_count": 42
+    }
+  },
+  "limitations": [
+    "所有新增记录均为合成本机演示数据。",
+    "员工满意度为本机模拟评分，不代表真实员工反馈。",
+    "模拟人工成本统一采用 35 元/h 基准费率和 1.5 倍加班倍率，不代表实际工资。",
+    "合规率来自生成脚本的场景规则模拟检查；所有方案均未执行独立硬约束核验。",
+    "旺季增产场景的需求量与基准场景不同，应优先比较覆盖率、单位覆盖成本和风险指标。",
+    "新增比较方案不进入现有 MIP 求解器输入。"
+  ]
+}

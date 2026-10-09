@@ -1,0 +1,9 @@
+{
+  "event_id": "S2-RAMPUP-DEMO",
+  "type": "rampup",
+  "scn_type": "增产",
+  "description": "SX-CAN01线2026-07-21白班/夜班增产：每岗位每班增加1人需求（外部参数假设：数据集订单与计划产量字段未填充，增产幅度为设计假设并明确标注）",
+  "line": "SX-CAN01",
+  "date": "2026-07-21",
+  "add_per_position": 1
+}

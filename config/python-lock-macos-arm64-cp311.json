@@ -1,0 +1,19 @@
+{
+  "target": {
+    "os": "macOS",
+    "architecture": "arm64",
+    "python_implementation": "CPython",
+    "python_version": "3.11",
+    "abi": "cp311"
+  },
+  "requirements_file": "config/python-lock-macos-arm64-cp311.txt",
+  "required_imports": ["numpy", "pandas", "openpyxl", "pyomo", "highspy"],
+  "runtime_scope": "vendor/python/macos-arm64-cp311",
+  "file_hash_manifest": "vendor/python/macos-arm64-cp311/SHA256SUMS",
+  "hashes_generated_during_package_build": true,
+  "notes": [
+    "包构建脚本在目标 Mac arm64 与 CPython 3.11 上安装精确版本并计算 vendor 文件 SHA-256。",
+    "运行脚本仅通过包内 vendor 路径加载库，并禁用 Python 用户级 site-packages。",
+    "发行前须确认 Pyomo、HiGHS、pandas、openpyxl 及所有二进制扩展的导入检查通过。"
+  ]
+}

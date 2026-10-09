@@ -1,0 +1,14 @@
+{
+  "host": "127.0.0.1",
+  "port": 8080,
+  "database": "data/runtime/scheduling.sqlite3",
+  "frontend_static_directory": "frontend/dist",
+  "python_executable": "python3.11",
+  "python_vendor_directory": "vendor/python/macos-arm64-cp311",
+  "default_job_timeout_seconds": 600,
+  "request_limit_bytes": 134217728,
+  "external_integrations": {
+    "status": "未连接",
+    "note": "HR、APS、MES、考勤和通知系统不属于本机演示连接范围。"
+  }
+}

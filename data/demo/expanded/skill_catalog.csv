@@ -1,0 +1,13 @@
+﻿skill_code,skill_name,skill_category,description
+SKILL-CORE,核心设备操作,设备操作,按员工主岗位记录核心设备操作能力评分。
+SKILL-SAFETY,安全规程,安全与合规,按统一评分口径记录安全规程执行能力。
+SKILL-QUALITY,质量抽检,质量管理,记录抽样、外观和质量异常处置能力。
+SKILL-CHANGEOVER,产品换型,生产支持,记录换型准备、操作和复位能力。
+SKILL-CIP,清洗消毒,食品安全,记录清洗消毒作业能力；不代表证书核验。
+SKILL-MAINTENANCE,设备点检,设备维护,记录日常点检和异常上报能力。
+SKILL-5S,现场整理,现场管理,记录现场整理、清洁和交接能力。
+SKILL-HANDOVER,班次交接,协同管理,记录班前、班后信息交接能力。
+SKILL-PACKAGING,包装作业,包装操作,记录包装设备与包装物料作业能力。
+SKILL-AUTOMATION,自动化设备操作,设备操作,记录自动化设备人机操作能力。
+SKILL-MATERIAL,物料配送,生产支持,记录生产物料配送与批次核对能力。
+SKILL-EMERGENCY,异常应急处置,安全与合规,记录异常识别、报告和初步处置能力。

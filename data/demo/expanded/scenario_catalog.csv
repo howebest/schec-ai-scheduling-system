@@ -1,0 +1,13 @@
+﻿scenario_code,schedule_id,scenario_name,scenario_family,strategy,comparison_group,demand_profile,source_type,notes
+SC01,DEMO-SC01,均衡基准,常规生产,覆盖与工时均衡,baseline-demand,稳定需求,synthetic_demo,作为其他方案的共同需求基准。
+SC02,DEMO-SC02,成本优先,成本控制,降低排班人班,baseline-demand,稳定需求,synthetic_demo,减少已覆盖人班以降低模拟人工成本，同时保留较多需求缺口。
+SC03,DEMO-SC03,覆盖优先,产能保障,最大化需求覆盖,baseline-demand,稳定需求,synthetic_demo,优先覆盖全部基准需求，允许产生较高工时投入。
+SC04,DEMO-SC04,公平优先,员工公平,均衡员工工作量,baseline-demand,稳定需求,synthetic_demo,优先降低员工工时差异，覆盖水平略低于全覆盖方案。
+SC05,DEMO-SC05,技能优先,技能匹配,优先安排技能得分较高人员,baseline-demand,稳定需求,synthetic_demo,突出岗位技能匹配，观察成本、覆盖和人员公平性的变化。
+SC06,DEMO-SC06,低加班,工时风险,控制加班投入,baseline-demand,稳定需求,synthetic_demo,不安排加班，使用需求缺口反映可用工时不足。
+SC07,DEMO-SC07,夜班保障,班次保障,夜班资格优先,baseline-demand,稳定需求,synthetic_demo,优先使用夜班资格人员，高工时压力作为风险对照。
+SC08,DEMO-SC08,突发缺勤,异常应急,可用人员减少,baseline-demand,每条线减少 3 名可用员工,synthetic_demo,每条线固定排除 3 名员工，展示缺勤对覆盖、加班和满意度的影响。
+SC09,DEMO-SC09,换型应急,生产切换,换型技能优先,baseline-demand,换型作业增多,synthetic_demo,优先安排掌握产品换型技能的员工，保留部分普通岗位缺口。
+SC10,DEMO-SC10,多技能补位,跨岗协同,多技能人员补位,baseline-demand,稳定需求,synthetic_demo,使用具备多岗位资格的员工补充关键和支持岗位。
+SC11,DEMO-SC11,旺季增产,需求变化,需求增加 15%,peak-demand,基准需求增加 15%,synthetic_demo,与基准需求方案的绝对指标不可直接等量比较；按覆盖率、单位覆盖成本和风险进行分析。
+SC12,DEMO-SC12,备用产能,产能韧性,保留人员储备并控制缺口,baseline-demand,可用人员储备,synthetic_demo,比较保留机动人员和加班投入对覆盖与成本的影响。

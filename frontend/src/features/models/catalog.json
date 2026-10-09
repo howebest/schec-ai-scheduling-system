@@ -1,0 +1,114 @@
+{
+  "trainedModels": [],
+  "optimizationModel": {
+    "version": "SCHEC-MIP-V1.0",
+    "name": "排班优化混合整数规划",
+    "category": "运筹优化模型",
+    "runtimeStatus": "本机可调用",
+    "inputVersion": "SCHEC-INPUT-V1.0",
+    "framework": "Pyomo ConcreteModel / ConstraintList",
+    "solver": "HiGHS 1.15.1，通过 Pyomo Appsi 接口调用",
+    "pythonRuntime": "CPython 3.11",
+    "fullCycle": {
+      "scope": "河北厂、陕西厂；62 d；交付阶段报告统计",
+      "variables": 168765,
+      "constraints": 148325,
+      "hardConstraintRange": "C1-C13"
+    },
+    "localDemo": {
+      "scope": "SX-PET01 产线；7 d；本机 API 验收",
+      "variables": 1920,
+      "constraints": 2454,
+      "termination": "optimal",
+      "incumbent": 1460,
+      "objectiveRecomputed": 1460,
+      "coveredPersonShifts": 98,
+      "demandPersonShifts": 98,
+      "hardConstraintViolations": 0
+    },
+    "objectiveWeights": [
+      { "name": "关键岗位缺位惩罚", "value": 100, "unit": "每人班", "direction": "惩罚项", "explanation": "降低关键岗位未覆盖需求；关键岗位分类需按使用的岗位来源口径说明。" },
+      { "name": "一般岗位缺位惩罚", "value": 40, "unit": "每人班", "direction": "惩罚项", "explanation": "降低一般岗位未覆盖需求。" },
+      { "name": "换型班次缺位附加惩罚", "value": 20, "unit": "每人班", "direction": "附加惩罚项", "explanation": "对换型班次的缺口增加惩罚。" },
+      { "name": "加班工时惩罚", "value": 5, "unit": "每 h", "direction": "惩罚项", "explanation": "按 12 h 班计薪口径中的加班工时计分。" },
+      { "name": "员工工时均衡", "value": 2, "unit": "每 h 工时极差", "direction": "惩罚项", "explanation": "降低模型候选员工范围内的计薪工时极差；均衡项包含本次未排班员工。" },
+      { "name": "12 h 班利用奖励", "value": -1, "unit": "每人班", "direction": "奖励项", "explanation": "在目标函数中以负权重奖励合规容量内的 12 h 班利用。" }
+    ],
+    "constraintFamilies": [
+      { "name": "岗位覆盖与缺口", "explanation": "岗位需求、整班指派、非完整班次折算与允许缺口共同满足覆盖账目。" },
+      { "name": "工时限制", "explanation": "标准工时为 8 h/d；日加班上限为 3 h；月加班上限为 36 h。" },
+      { "name": "休息与班间隔", "explanation": "连续 7 个日历日至少休息 1 d；相邻班次间隔不少于 11 h。" },
+      { "name": "人员资格", "explanation": "按岗位技能等级、证书有效期、夜班资格和常白班模式约束人员指派。" },
+      { "name": "非完整班次", "explanation": "以小时粒度建模，8 h 折算为 1 人班；报告中说明非完整班不用于关键岗位。" }
+    ],
+    "callableTasks": ["info", "solve_demo", "solve_full", "verify_baseline", "reschedule", "kpi"]
+  },
+  "versionChain": [
+    { "version": "SCHEC-INPUT-V1.0", "stage": "模型输入", "scope": "392 名员工；996 对技能资格，其中 884 对达标；107 个岗位；18 条产线；62 d 运行日历。", "evidence": "原始工作簿 SHA-256 前缀 3f2c97ae；本机 info 任务已成功读取。", "status": "本机已读取" },
+    { "version": "SCHEC-MIP-V1.0", "stage": "优化建模", "scope": "混合整数规划；C1-C13 结构化约束；权重 100/40/+20/5/2/-1。", "evidence": "报告记录 62 d 全量 168,765 个变量、148,325 条约束；本机 7 d 演示求解已通过。", "status": "本机已调用" },
+    { "version": "SCHEC-SOLVE-V1.1", "stage": "基准求解与权重实验", "scope": "FULL62-W1 基准；W1/W2/W3 权重对比；7 d 与 14 d 滚动窗口。", "evidence": "交付报告记录基准目标值 249,870、求解 32.4 s；W3 均衡增强使工时极差由 136 h 降至 51 h，关键岗位缺口增加 15 人班。", "status": "阶段报告记录" },
+    { "version": "SCHEC-RESCHED-V1.0", "stage": "异常增量重排", "scope": "插单、增产、换产、设备故障、员工突发离岗五类场景。", "evidence": "报告记录五类场景均获得 optimal；生成响应时间 1.45-1.70 s，端到端不超过 1.97 s。", "status": "阶段报告记录" },
+    { "version": "SCHEC-VALID-V3.0", "stage": "独立核验", "scope": "按原始规则重建指派序列并复算劳动合规、资格和覆盖账目。", "evidence": "报告记录 7 个核验对象、10 项核验；报告中的违例计数为 0。覆盖率需求口径存在 36 人班差异。", "status": "阶段报告记录" },
+    { "version": "SCHEC-KPI-V1.0.1", "stage": "KPI 与多维可视化", "scope": "工厂、部门、岗位、个人级统计；甘特图、看板矩阵、个人日历和调度场景。", "evidence": "12 个 KPI 统计 CSV、6 幅 PNG 图表、13 个表格证据；报告文件名与正文版本标记不同，见报告目录。", "status": "阶段报告记录" },
+    { "version": "SCHEC-PKG-V1.0", "stage": "本机工程化包", "scope": "Rust 单端口服务、React/Ant Design 静态资源、Rust 管理的 CPython 3.11 vendor。", "evidence": "本机 arm64 发行构建、info 与 solve_demo API 验收已完成。", "status": "本机可运行" }
+  ],
+  "baseline": {
+    "scheduleVersion": "FULL62-W1",
+    "period": "2026-07-01 至 2026-08-31（62 d）",
+    "factories": ["河北厂", "陕西厂"],
+    "employeeCount": 392,
+    "totalPaidHours": 107003,
+    "standardHours": 77544,
+    "overtimeHours": 25731,
+    "partialShiftHours": 3728,
+    "productionHoursSharePercent": 68.26,
+    "capacityUtilizationPercent": 91.17,
+    "coverage": {
+      "solver": { "label": "求解口径", "demandPersonShifts": 11912, "coveredPersonShifts": 10159, "gapPersonShifts": 1753, "ratePercent": 85.28 },
+      "independent": { "label": "独立核验重建口径", "demandPersonShifts": 11948, "coveredPersonShifts": 10159, "gapPersonShifts": 1789, "ratePercent": 85.03 },
+      "differencePersonShifts": 36,
+      "differenceCells": 6
+    },
+    "keyPositionGap": [
+      { "label": "按台账岗位类别判定", "gapPersonShifts": 990 },
+      { "label": "按 input_04 是否关键岗位字段判定", "gapPersonShifts": 1045 }
+    ],
+    "overtime": {
+      "meanHoursPerEmployee": 65.64,
+      "rangeHours": 72,
+      "coefficientOfVariation": 0.3092,
+      "gini": 0.0883,
+      "p90ToP10Ratio": 1,
+      "employeeMonthsOver36Hours": 0
+    },
+    "manufacturingProductivity": {
+      "status": "不可计算",
+      "reason": "数据集中的计划产量字段 4,683 行均未填充；报告以生产工时占比、覆盖率和容量利用率作为可核算替代指标。"
+    },
+    "sourceNote": "本报告统计使用规则驱动仿真样本，不构成实际工厂绩效证据。两种覆盖率需求口径相差 36 人班、6 个班次；关键岗位缺口也因岗位分类字段口径不同而存在差异。"
+  },
+  "reports": [
+    {
+      "id": "kpi-visualization",
+      "title": "排班 KPI 统计与多维可视化阶段报告",
+      "fileVersion": "SCHEC-KPI-V1.0.1",
+      "documentVersion": "SCHEC-KPI-V1.0",
+      "originalFileName": "排班KPI统计与多维可视化阶段报告（SCHEC-KPI-V1.0.1清单更正版）.html",
+      "assetFile": "SCHEC-KPI-V1.0.1.html",
+      "summary": "呈现 62 d 基准方案的工时结构、加班平衡、双口径覆盖率、多个层级统计及排班可视化。",
+      "evidenceScope": "规则驱动仿真样本；不代表实际工厂绩效。",
+      "deliverables": "12 个 KPI 统计 CSV、6 幅 PNG 图表和 13 个表格证据。"
+    },
+    {
+      "id": "model-delivery",
+      "title": "AI 智慧排班系统模型开发综合交付阶段报告",
+      "fileVersion": "SCHEC-DELIVERY-V1.0",
+      "documentVersion": "SCHEC-DELIVERY-V1.0",
+      "originalFileName": "中粮可口可乐AI智慧排班系统模型开发综合交付阶段报告_SCHEC-DELIVERY-V1.0.html",
+      "assetFile": "SCHEC-DELIVERY-V1.0.html",
+      "summary": "记录模型版本链、约束与业务规则映射、多目标权重实验、独立核验、性能数据、五类增量重排成果及适用限制。",
+      "evidenceScope": "规则驱动仿真样本；不代表实际工厂绩效。",
+      "deliverables": "模型开发、求解、重排、核验与 KPI 阶段成果索引。"
+    }
+  ]
+}

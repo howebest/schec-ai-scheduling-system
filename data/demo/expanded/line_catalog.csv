@@ -1,0 +1,7 @@
+﻿line_id,line_name,factory_code,factory_name,line_type,source_type
+PET-01,PET-01,HB,河北厂,soda,synthetic_demo
+PET-02,PET-02,HB,河北厂,soda,synthetic_demo
+PET-03,PET-03,HB,河北厂,soda,synthetic_demo
+ASEPTIC-A,无菌线-A,SX,陕西厂,aseptic,synthetic_demo
+ASEPTIC-B,无菌线-B,SX,陕西厂,aseptic,synthetic_demo
+ASEPTIC-C,无菌线-C,SX,陕西厂,aseptic,synthetic_demo

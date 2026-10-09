@@ -1,0 +1,8 @@
+{
+  "event_id": "S5-ABSENCE-DEMO",
+  "type": "absence",
+  "scn_type": "员工突发离岗",
+  "description": "员工EMPHB0325自2026-07-20起7天突发离岗：窗口内全部指派与非完整班禁排，原岗位出现空缺，由基于技能矩阵的多技能人员补位",
+  "employee": "EMPHB0325",
+  "date": "2026-07-20"
+}

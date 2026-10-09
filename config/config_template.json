@@ -1,0 +1,51 @@
+{
+  "schema": "SCHEC-PKG-V1.0 配置模板",
+  "说明": "本文件为参数配置模板；命令行参数优先级高于本文件，当前版本各命令均以命令行参数为准，本文件用于记录与解释全部可配置项。",
+  "compliance_params": {
+    "H1_STD_HOURS": 8.0,
+    "H2_DAILY_OT_CAP": 3.0,
+    "H2_MEAL_UNPAID": 1.0,
+    "H3_MONTH_OT_CAP": 36.0,
+    "H4_MIN_INTERVAL": 11.0,
+    "H5_REST_PER_7D": 1,
+    "DRV_MAX_12H_SHIFTS": 12,
+    "来源": "RFP验收标准第2条与数据口径派生（月加班36小时÷每班3小时=12班）"
+  },
+  "objective_weights_W1": {
+    "gap_key": 100.0,
+    "gap_gen": 40.0,
+    "co_gap_extra": 20.0,
+    "ot_per_hour": 5.0,
+    "balance_per_hour": 2.0,
+    "util_per_shift": 1.0,
+    "来源": "已验收SCHEC-MIP-V1.0基准权重，权重按数量级实现近似字典序优先关系"
+  },
+  "solver": {
+    "name": "HiGHS",
+    "interface": "pyomo.contrib.appsi.Highs",
+    "time_limit_seconds": {
+      "solve_full": 600,
+      "solve_demo": 300,
+      "reschedule": 45,
+      "说明": "重排时限45秒为60秒响应目标预留方案生成其他环节时间"
+    }
+  },
+  "reschedule": {
+    "window_days": 7,
+    "解锁范围": "事件影响单元与同厂窗口内基准缺口单元，其余变量与缺口变量固定为基准值",
+    "边界处理": ["窗口前后夜班-早班禁排", "月12小时班上限按窗口外同月已用紧缩", "连续7天休息约束按窗口前后各6天前缀/后缀衔接"]
+  },
+  "versions": {
+    "package": "SCHEC-PKG-V1.0",
+    "model": "SCHEC-MIP-V1.0",
+    "input": "SCHEC-INPUT-V1.0（口径一致，实际输入为原始附件）",
+    "baseline_solution": "FULL62-W1",
+    "rescheduling_algorithm": "SCHEC-RESCHED-V1.0（锁定式增量重排）",
+    "verification": "SCHEC-VALID-V3.0口径（七项硬约束独立复算）"
+  },
+  "backfill_recommendation": {
+    "top_n": 5,
+    "score": "40*(技能等级-要求等级) + 10*有证书 + 5*窗口空闲天数 - 0.02*画像累计在岗时长",
+    "thresholds": {"skill_level_promotion_hours": 200}
+  }
+}

@@ -1,0 +1,2332 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-demo-expanded-20261008-v1",
+  "source_type": "synthetic_demo",
+  "generator": "scripts/generate_expanded_demo_data.py",
+  "generator_version": "1.0.0",
+  "seed": 20261008,
+  "period": {
+    "start_date": "2026-10-01",
+    "end_date": "2026-10-14",
+    "days": 14
+  },
+  "comparison_dimensions": [
+    "scenario_family",
+    "scenario_code",
+    "comparison_group",
+    "factory_code",
+    "line_id",
+    "team_id",
+    "position_id",
+    "skill_code",
+    "shift_code",
+    "coverage_rate_pct",
+    "simulated_labor_cost_cny",
+    "overtime_hours_h",
+    "coverage_balance_score",
+    "hours_gini",
+    "compliance_rate_pct",
+    "satisfaction_average_1_to_5"
+  ],
+  "metric_definitions": {
+    "coverage_rate_pct": "已覆盖人班 ÷ 需求人班 × 100%；未覆盖需求以缺口记录表示。",
+    "simulated_labor_cost_cny": "非加班工时 × 35 元/h + 加班工时 × 52.5 元/h；仅为统一费率代理。",
+    "compliance_rate_pct": "七项场景规则检查中未记录违例的检查项数 ÷ 有效检查项数 × 100%；未执行独立核验。",
+    "satisfaction_average_1_to_5": "每套方案关联的本机模拟评分算术平均值；不是真实问卷结果。",
+    "hours_gini": "按方案内参与排班员工计薪工时计算的基尼系数；越低表示工时分布越均衡。"
+  },
+  "plans": [
+    {
+      "scenario_code": "SC01",
+      "schedule_id": "DEMO-SC01",
+      "scenario_name": "均衡基准",
+      "scenario_family": "常规生产",
+      "strategy": "覆盖与工时均衡",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "稳定需求",
+      "priority": "覆盖与工时均衡",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC01.csv",
+      "sha256": "3ca6d25690f50a3075d3a0a9e7e69aef6e91b18922b3fbf1175dc2c2f5502680",
+      "source_type": "synthetic_demo",
+      "notes": "作为其他方案的共同需求基准。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 645.0,
+        "gap_person_shifts": 27.0,
+        "coverage_rate_pct": 95.98,
+        "paid_hours_h": 5255.0,
+        "standard_hours_h": 5160.0,
+        "overtime_hours_h": 95.0,
+        "overtime_share_pct": 1.81,
+        "simulated_labor_cost_cny": 185587.5,
+        "cost_per_covered_shift_cny": 287.73,
+        "labor_efficiency_shifts_per_100h": 12.274,
+        "labor_hour_utilization_pct": 35.55,
+        "coverage_balance_score": 89.62,
+        "hours_gini": 0.0308,
+        "hours_range_h": 16.0,
+        "satisfaction_average_1_to_5": 4.0,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 100.0,
+        "rule_violation_count": 0
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 0,
+        "one_per_day": 0,
+        "interval_11h": 0,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X01-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X04-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-3-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-3-2",
+          "satisfaction_score": 4
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC02",
+      "schedule_id": "DEMO-SC02",
+      "scenario_name": "成本优先",
+      "scenario_family": "成本控制",
+      "strategy": "降低排班人班",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "稳定需求",
+      "priority": "降低排班人班",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC02.csv",
+      "sha256": "14943f625ed95a29ec18ce251e78f42a3352c48551feda2a30461aaa0418d6a2",
+      "source_type": "synthetic_demo",
+      "notes": "减少已覆盖人班以降低模拟人工成本，同时保留较多需求缺口。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 551.0,
+        "gap_person_shifts": 121.0,
+        "coverage_rate_pct": 81.99,
+        "paid_hours_h": 4408.0,
+        "standard_hours_h": 4408.0,
+        "overtime_hours_h": 0.0,
+        "overtime_share_pct": 0.0,
+        "simulated_labor_cost_cny": 154280.0,
+        "cost_per_covered_shift_cny": 280.0,
+        "labor_efficiency_shifts_per_100h": 12.5,
+        "labor_hour_utilization_pct": 85.56,
+        "coverage_balance_score": 80.91,
+        "hours_gini": 0.1347,
+        "hours_range_h": 104.0,
+        "satisfaction_average_1_to_5": 3.37,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 57.14,
+        "rule_violation_count": 347
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 72,
+        "one_per_day": 0,
+        "interval_11h": 19,
+        "rest_7d": 256,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-1-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-3-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X01-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-3-1",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X01-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-01",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-01",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X02-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-3-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-3-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-02",
+          "satisfaction_score": 3
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC03",
+      "schedule_id": "DEMO-SC03",
+      "scenario_name": "覆盖优先",
+      "scenario_family": "产能保障",
+      "strategy": "最大化需求覆盖",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "稳定需求",
+      "priority": "最大化需求覆盖",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC03.csv",
+      "sha256": "cba98dc46bc1ac95965ef30f58ae178431a4598650ff8fc47b216278ead07197",
+      "source_type": "synthetic_demo",
+      "notes": "优先覆盖全部基准需求，允许产生较高工时投入。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 672.0,
+        "gap_person_shifts": 0,
+        "coverage_rate_pct": 100.0,
+        "paid_hours_h": 5709.0,
+        "standard_hours_h": 5376.0,
+        "overtime_hours_h": 333.0,
+        "overtime_share_pct": 5.83,
+        "simulated_labor_cost_cny": 205642.5,
+        "cost_per_covered_shift_cny": 306.02,
+        "labor_efficiency_shifts_per_100h": 11.771,
+        "labor_hour_utilization_pct": 38.62,
+        "coverage_balance_score": 100.0,
+        "hours_gini": 0.0396,
+        "hours_range_h": 20.5,
+        "satisfaction_average_1_to_5": 3.63,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 100.0,
+        "rule_violation_count": 0
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 0,
+        "one_per_day": 0,
+        "interval_11h": 0,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X01-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-3-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X04-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-1-1",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-01",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-3-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-3-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X03-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-2-1",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X03-01",
+          "satisfaction_score": 4
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC04",
+      "schedule_id": "DEMO-SC04",
+      "scenario_name": "公平优先",
+      "scenario_family": "员工公平",
+      "strategy": "均衡员工工作量",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "稳定需求",
+      "priority": "均衡员工工作量",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC04.csv",
+      "sha256": "d67372af5ff327819918747e2231ab6a5269960f47c2cdb5faa05b6cb21c98ee",
+      "source_type": "synthetic_demo",
+      "notes": "优先降低员工工时差异，覆盖水平略低于全覆盖方案。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 638.0,
+        "gap_person_shifts": 34.0,
+        "coverage_rate_pct": 94.94,
+        "paid_hours_h": 5104.0,
+        "standard_hours_h": 5104.0,
+        "overtime_hours_h": 0.0,
+        "overtime_share_pct": 0.0,
+        "simulated_labor_cost_cny": 178640.0,
+        "cost_per_covered_shift_cny": 280.0,
+        "labor_efficiency_shifts_per_100h": 12.5,
+        "labor_hour_utilization_pct": 34.52,
+        "coverage_balance_score": 88.31,
+        "hours_gini": 0.0313,
+        "hours_range_h": 16.0,
+        "satisfaction_average_1_to_5": 4.6,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 100.0,
+        "rule_violation_count": 0
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 0,
+        "one_per_day": 0,
+        "interval_11h": 0,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-01",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-03",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-04",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-2-1",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-04",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-1",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-02",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-1-1",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-02",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-03",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-04",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-2",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-3-1",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-01",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X01-01",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-3-2",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-1",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X04-02",
+          "satisfaction_score": 5
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC05",
+      "schedule_id": "DEMO-SC05",
+      "scenario_name": "技能优先",
+      "scenario_family": "技能匹配",
+      "strategy": "优先安排技能得分较高人员",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "稳定需求",
+      "priority": "优先安排技能得分较高人员",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC05.csv",
+      "sha256": "cb88b0dfed2c411c1d0ef5ebb2665bf7d9509c01d260894f4631ef4eee1408a4",
+      "source_type": "synthetic_demo",
+      "notes": "突出岗位技能匹配，观察成本、覆盖和人员公平性的变化。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 632.0,
+        "gap_person_shifts": 40.0,
+        "coverage_rate_pct": 94.05,
+        "paid_hours_h": 5152.0,
+        "standard_hours_h": 5056.0,
+        "overtime_hours_h": 96.0,
+        "overtime_share_pct": 1.86,
+        "simulated_labor_cost_cny": 182000.0,
+        "cost_per_covered_shift_cny": 287.97,
+        "labor_efficiency_shifts_per_100h": 12.267,
+        "labor_hour_utilization_pct": 54.76,
+        "coverage_balance_score": 86.95,
+        "hours_gini": 0.3408,
+        "hours_range_h": 93.0,
+        "satisfaction_average_1_to_5": 4.13,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 100.0,
+        "rule_violation_count": 0
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 0,
+        "one_per_day": 0,
+        "interval_11h": 0,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-EMP-PET-01-2-1",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-3-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-2-2",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-03",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-2-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-3-2",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-2-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-2-1",
+          "satisfaction_score": 4
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC06",
+      "schedule_id": "DEMO-SC06",
+      "scenario_name": "低加班",
+      "scenario_family": "工时风险",
+      "strategy": "控制加班投入",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "稳定需求",
+      "priority": "控制加班投入",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC06.csv",
+      "sha256": "7a3a2005658d19330eda34908c6cde55d762291be29f2f5aac96d79d895a7f3f",
+      "source_type": "synthetic_demo",
+      "notes": "不安排加班，使用需求缺口反映可用工时不足。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 612.0,
+        "gap_person_shifts": 60.0,
+        "coverage_rate_pct": 91.07,
+        "paid_hours_h": 4896.0,
+        "standard_hours_h": 4896.0,
+        "overtime_hours_h": 0.0,
+        "overtime_share_pct": 0.0,
+        "simulated_labor_cost_cny": 171360.0,
+        "cost_per_covered_shift_cny": 280.0,
+        "labor_efficiency_shifts_per_100h": 12.5,
+        "labor_hour_utilization_pct": 33.12,
+        "coverage_balance_score": 85.24,
+        "hours_gini": 0.0499,
+        "hours_range_h": 8.0,
+        "satisfaction_average_1_to_5": 4.3,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 100.0,
+        "rule_violation_count": 0
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 0,
+        "one_per_day": 0,
+        "interval_11h": 0,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-3-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X03-04",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X01-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-02",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-1",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-3-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-1",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-04",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-3-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X03-01",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-2",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-02",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-2-2",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X01-04",
+          "satisfaction_score": 4
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC07",
+      "schedule_id": "DEMO-SC07",
+      "scenario_name": "夜班保障",
+      "scenario_family": "班次保障",
+      "strategy": "夜班资格优先",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "稳定需求",
+      "priority": "夜班资格优先",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC07.csv",
+      "sha256": "c15f9eefa6f01540d8d6e611d4b548e7c06702ffa215c5c465cf5f2217f4f16a",
+      "source_type": "synthetic_demo",
+      "notes": "优先使用夜班资格人员，高工时压力作为风险对照。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 659.0,
+        "gap_person_shifts": 13.0,
+        "coverage_rate_pct": 98.07,
+        "paid_hours_h": 7085.0,
+        "standard_hours_h": 5272.0,
+        "overtime_hours_h": 1813.0,
+        "overtime_share_pct": 25.59,
+        "simulated_labor_cost_cny": 279702.5,
+        "cost_per_covered_shift_cny": 424.43,
+        "labor_efficiency_shifts_per_100h": 9.301,
+        "labor_hour_utilization_pct": 54.53,
+        "coverage_balance_score": 92.64,
+        "hours_gini": 0.1253,
+        "hours_range_h": 68.0,
+        "satisfaction_average_1_to_5": 3.67,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 85.71,
+        "rule_violation_count": 14
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 0,
+        "one_per_day": 0,
+        "interval_11h": 14,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-2-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-3-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-3-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-01",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-3-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-3-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-01",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-04",
+          "satisfaction_score": 4
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC08",
+      "schedule_id": "DEMO-SC08",
+      "scenario_name": "突发缺勤",
+      "scenario_family": "异常应急",
+      "strategy": "可用人员减少",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "每条线减少 3 名可用员工",
+      "priority": "可用人员减少",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC08.csv",
+      "sha256": "7cb24d12bdd67319e70123850280aefa63c2bdfa3178a828342329ffda48c3be",
+      "source_type": "synthetic_demo",
+      "notes": "每条线固定排除 3 名员工，展示缺勤对覆盖、加班和满意度的影响。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 564.0,
+        "gap_person_shifts": 108.0,
+        "coverage_rate_pct": 83.93,
+        "paid_hours_h": 6690.0,
+        "standard_hours_h": 4512.0,
+        "overtime_hours_h": 2178.0,
+        "overtime_share_pct": 32.56,
+        "simulated_labor_cost_cny": 272265.0,
+        "cost_per_covered_shift_cny": 482.74,
+        "labor_efficiency_shifts_per_100h": 8.43,
+        "labor_hour_utilization_pct": 124.44,
+        "coverage_balance_score": 78.37,
+        "hours_gini": 0.1411,
+        "hours_range_h": 142.0,
+        "satisfaction_average_1_to_5": 2.67,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 28.57,
+        "rule_violation_count": 878
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 54,
+        "one_per_day": 0,
+        "interval_11h": 29,
+        "rest_7d": 256,
+        "month_ot_36h": 37,
+        "daily_hours": 502,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-1",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-2-1",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-2-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-2-1",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-3-2",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-2-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-1-2",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-3-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-2-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-1-1",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X04-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-01",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-2-2",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-3-2",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-04",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-1-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-03",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-1-2",
+          "satisfaction_score": 2
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-3-1",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-1-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-3-1",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-2-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-3-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-01",
+          "satisfaction_score": 3
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC09",
+      "schedule_id": "DEMO-SC09",
+      "scenario_name": "换型应急",
+      "scenario_family": "生产切换",
+      "strategy": "换型技能优先",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "换型作业增多",
+      "priority": "换型技能优先",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC09.csv",
+      "sha256": "2ef04138439d8d5993ce611a0d1977f4d23c2fa3cc4b15cf8f21aac8e9edaa2e",
+      "source_type": "synthetic_demo",
+      "notes": "优先安排掌握产品换型技能的员工，保留部分普通岗位缺口。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 605.0,
+        "gap_person_shifts": 67.0,
+        "coverage_rate_pct": 90.03,
+        "paid_hours_h": 5141.5,
+        "standard_hours_h": 4840.0,
+        "overtime_hours_h": 301.5,
+        "overtime_share_pct": 5.86,
+        "simulated_labor_cost_cny": 185228.75,
+        "cost_per_covered_shift_cny": 306.16,
+        "labor_efficiency_shifts_per_100h": 11.767,
+        "labor_hour_utilization_pct": 57.38,
+        "coverage_balance_score": 82.04,
+        "hours_gini": 0.3262,
+        "hours_range_h": 98.5,
+        "satisfaction_average_1_to_5": 3.63,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 85.71,
+        "rule_violation_count": 45
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 45,
+        "one_per_day": 0,
+        "interval_11h": 0,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-3-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X01-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-3-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-1-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-3-1",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-A-2-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-3-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-01",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-1-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-04",
+          "satisfaction_score": 3
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC10",
+      "schedule_id": "DEMO-SC10",
+      "scenario_name": "多技能补位",
+      "scenario_family": "跨岗协同",
+      "strategy": "多技能人员补位",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "稳定需求",
+      "priority": "多技能人员补位",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC10.csv",
+      "sha256": "29d7074a018ef9353bc8e0452202728111dd8cdeedb14fe3c853cdb81e7e5619",
+      "source_type": "synthetic_demo",
+      "notes": "使用具备多岗位资格的员工补充关键和支持岗位。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 652.0,
+        "gap_person_shifts": 20.0,
+        "coverage_rate_pct": 97.02,
+        "paid_hours_h": 5304.0,
+        "standard_hours_h": 5216.0,
+        "overtime_hours_h": 88.0,
+        "overtime_share_pct": 1.66,
+        "simulated_labor_cost_cny": 187180.0,
+        "cost_per_covered_shift_cny": 287.09,
+        "labor_efficiency_shifts_per_100h": 12.293,
+        "labor_hour_utilization_pct": 59.95,
+        "coverage_balance_score": 89.94,
+        "hours_gini": 0.277,
+        "hours_range_h": 94.0,
+        "satisfaction_average_1_to_5": 4.47,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 100.0,
+        "rule_violation_count": 0
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 0,
+        "one_per_day": 0,
+        "interval_11h": 0,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-02",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X01-03",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-03",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X01-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X03-03",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-01",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-04",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-04",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X04-03",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X01-02",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-03",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-03",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-02",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-01",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-01",
+          "satisfaction_score": 5
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-03",
+          "satisfaction_score": 4
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC11",
+      "schedule_id": "DEMO-SC11",
+      "scenario_name": "旺季增产",
+      "scenario_family": "需求变化",
+      "strategy": "需求增加 15%",
+      "comparison_group": "peak-demand",
+      "demand_profile": "基准需求增加 15%",
+      "priority": "需求增加 15%",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC11.csv",
+      "sha256": "f0bc3dab7b9f531c4ea965ac8223e7143dc163c02ac4dc084a15b275afe9bd26",
+      "source_type": "synthetic_demo",
+      "notes": "与基准需求方案的绝对指标不可直接等量比较；按覆盖率、单位覆盖成本和风险进行分析。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 773.0,
+        "covered_person_shifts": 703.0,
+        "gap_person_shifts": 70.0,
+        "coverage_rate_pct": 90.94,
+        "paid_hours_h": 7564.0,
+        "standard_hours_h": 5624.0,
+        "overtime_hours_h": 1940.0,
+        "overtime_share_pct": 25.65,
+        "simulated_labor_cost_cny": 298690.0,
+        "cost_per_covered_shift_cny": 424.88,
+        "labor_efficiency_shifts_per_100h": 9.294,
+        "labor_hour_utilization_pct": 51.16,
+        "coverage_balance_score": 86.04,
+        "hours_gini": 0.0485,
+        "hours_range_h": 15.0,
+        "satisfaction_average_1_to_5": 3.67,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 85.71,
+        "rule_violation_count": 13
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 0,
+        "one_per_day": 0,
+        "interval_11h": 13,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-3-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-01",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-3-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X01-04",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-B-1-2",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-ASEPTIC-C-2-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X03-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-2-1",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-02",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X01-03",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-3-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-03-1-1",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-01-1-2",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-01",
+          "satisfaction_score": 3
+        },
+        {
+          "employee_id": "DEMO-EMP-PET-02-1-1",
+          "satisfaction_score": 3
+        }
+      ]
+    },
+    {
+      "scenario_code": "SC12",
+      "schedule_id": "DEMO-SC12",
+      "scenario_name": "备用产能",
+      "scenario_family": "产能韧性",
+      "strategy": "保留人员储备并控制缺口",
+      "comparison_group": "baseline-demand",
+      "demand_profile": "可用人员储备",
+      "priority": "保留人员储备并控制缺口",
+      "period": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-14",
+        "days": 14
+      },
+      "artifact_path": "data/demo/expanded/schedules/SC12.csv",
+      "sha256": "1357e5150e6bdbb371cb941d4d2822f11e64100cd22be6102a9048cdbb97444f",
+      "source_type": "synthetic_demo",
+      "notes": "比较保留机动人员和加班投入对覆盖与成本的影响。",
+      "comparison_dimensions": [
+        "scenario_family",
+        "scenario_code",
+        "comparison_group",
+        "factory_code",
+        "line_id",
+        "team_id",
+        "position_id",
+        "skill_code",
+        "shift_code",
+        "coverage_rate_pct",
+        "simulated_labor_cost_cny",
+        "overtime_hours_h",
+        "coverage_balance_score",
+        "hours_gini",
+        "compliance_rate_pct",
+        "satisfaction_average_1_to_5"
+      ],
+      "metrics": {
+        "demand_person_shifts": 672.0,
+        "covered_person_shifts": 625.0,
+        "gap_person_shifts": 47.0,
+        "coverage_rate_pct": 93.01,
+        "paid_hours_h": 5316.5,
+        "standard_hours_h": 5000.0,
+        "overtime_hours_h": 316.5,
+        "overtime_share_pct": 5.95,
+        "simulated_labor_cost_cny": 191616.25,
+        "cost_per_covered_shift_cny": 306.59,
+        "labor_efficiency_shifts_per_100h": 11.756,
+        "labor_hour_utilization_pct": 63.29,
+        "coverage_balance_score": 86.58,
+        "hours_gini": 0.2696,
+        "hours_range_h": 98.5,
+        "satisfaction_average_1_to_5": 4.0,
+        "satisfaction_response_count": 30,
+        "compliance_rate_pct": 100.0,
+        "rule_violation_count": 0
+      },
+      "all_pass": null,
+      "verification_state": "场景规则模拟评估；未执行独立核验",
+      "violations": {
+        "qual_night": 0,
+        "one_per_day": 0,
+        "interval_11h": 0,
+        "rest_7d": 0,
+        "month_ot_36h": 0,
+        "daily_hours": 0,
+        "coverage_eq": 0
+      },
+      "feedback_samples": [
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X04-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X04-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X04-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X02-03",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-02-X03-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X02-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X01-04",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-03-X01-01",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X03-02",
+          "satisfaction_score": 4
+        },
+        {
+          "employee_id": "DEMO-XEMP-PET-01-X01-03",
+          "satisfaction_score": 4
+        }
+      ]
+    }
+  ]
+}

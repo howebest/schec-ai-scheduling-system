@@ -1,0 +1,3 @@
+﻿shift_code,shift_name,start_time,end_time,source_type
+DAY,白班,07:00,19:00,synthetic_demo
+NIGHT,夜班,19:00,07:00,synthetic_demo

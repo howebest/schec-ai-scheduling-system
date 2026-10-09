@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中粮可口可乐AI智慧排班系统模型开发综合交付报告（SCHEC-DELIVERY-V1.0）</title>
+<style>
+.sd-report{font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",sans-serif;color:#2b2f36;background:#fff;line-height:1.7;max-width:1200px;margin:0 auto;padding:24px 20px 60px;font-size:15px}
+.sd-report h1{font-size:26px;margin:8px 0 4px;color:#1a1d22}
+.sd-report h2{font-size:20px;margin:0 0 4px;color:#1a1d22}
+.sd-report h3{font-size:16px;margin:22px 0 8px;color:#252a31;border-left:4px solid #35507a;padding-left:10px}
+.sd-report p{margin:8px 0;text-align:justify}
+.sd-report .sd-sub{color:#5a626d;font-size:13px;margin-bottom:4px}
+.sd-report .sd-meta{font-size:13px;color:#5a626d;border-bottom:1px solid #d8dce2;padding-bottom:12px;margin-bottom:16px}
+.sd-report .sd-section{margin-top:34px}
+.sd-report .sd-sec-head{background:#f3f5f8;border-left:5px solid #35507a;padding:10px 14px;margin-bottom:14px}
+.sd-report .sd-sec-head .sd-purpose{font-size:13px;color:#5a626d;margin:2px 0 0}
+.sd-report table{border-collapse:collapse;width:100%;margin:10px 0 16px;font-size:13.5px;background:#fff}
+.sd-report th,.sd-report td{border:1px solid #c9cfd8;padding:7px 9px;vertical-align:top;text-align:left}
+.sd-report th{background:#eef1f5;font-weight:600;white-space:nowrap}
+.sd-report .sd-scroll{overflow-x:auto}
+.sd-report .sd-num{white-space:nowrap;font-weight:600}
+.sd-report .sd-tag{display:inline-block;padding:1px 9px;border-radius:9px;font-size:12.5px;white-space:nowrap;border:1px solid}
+.sd-report .sd-tag-implemented{color:#1d6b3f;background:#e9f6ee;border-color:#9fd3b4}
+.sd-report .sd-tag-simulated{color:#8a5a00;background:#fdf3e0;border-color:#e3c078}
+.sd-report .sd-tag-design{color:#1f4f8f;background:#e8f0fb;border-color:#9dbde6}
+.sd-report .sd-cards{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0}
+.sd-report .sd-card{flex:1 1 340px;border:1px solid #d8dce2;border-radius:6px;padding:10px 14px;background:#fbfcfd;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.sd-report .sd-card h4{margin:2px 0 6px;font-size:15px;color:#252a31}
+.sd-report .sd-finding{border:1px solid #d8dce2;border-left:4px solid #35507a;border-radius:4px;padding:9px 13px;margin:10px 0;background:#fbfcfd}
+.sd-report .sd-finding .sd-fid{font-size:12.5px;color:#5a626d}
+.sd-report .sd-note{background:#f7f8fa;border:1px solid #dfe3e8;border-radius:4px;padding:9px 13px;margin:10px 0;font-size:13.5px}
+.sd-report .sd-warn{background:#fdf6ec;border-color:#e8d5ad}
+.sd-report .sd-na{font-size:13px;color:#5a626d;border-top:1px dashed #c9cfd8;margin-top:18px;padding-top:8px}
+.sd-report .sd-nav{background:#f3f5f8;border:1px solid #dfe3e8;border-radius:6px;padding:10px 14px;font-size:13.5px}
+.sd-report .sd-nav a{color:#35507a;text-decoration:none;margin-right:14px;white-space:nowrap}
+.sd-report ul,.sd-report ol{margin:8px 0;padding-left:22px}
+.sd-report li{margin:4px 0;text-align:justify}
+.sd-report code{background:#f0f2f5;border-radius:3px;padding:0 4px;font-size:13px}
+@media (max-width:768px){.sd-report{font-size:14px;padding:12px 10px 40px}.sd-report h1{font-size:21px}.sd-report .sd-card{flex:1 1 100%}.sd-report .sd-nav{display:flex;flex-wrap:wrap;gap:6px}.sd-report .sd-nav a{margin-right:8px}}
+@media print{.sd-nav{display:none}.sd-report{max-width:none;padding:0}.sd-report .sd-section{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="sd-report" id="sd-top">
+<h1>中粮可口可乐AI智慧排班系统模型开发综合交付报告</h1>
+<div class="sd-sub">版本标识：SCHEC-DELIVERY-V1.0（静态综合交付阶段报告）</div>
+<div class="sd-meta">
+试点范围：河北厂4条生产线（3条PET塑料瓶线、1条无菌线）与陕西厂4条生产线及1条BIB生产线（2条PET塑料瓶线、1条拉罐线、1条玻璃瓶线），共18条产线、107个台账岗位、392名在册员工（生产部、工程部、品控部）；24小时两班制（白班/夜班各12小时）。</div>
+<div class="sd-meta">
+排班试点期：2026-07-01至2026-08-31（62天）。数据来源：附件《中粮可乐AI智慧排班_模型训练数据集_V1.0.xlsx》（SHA-256 3f2c97ae…）。编制依据：本工作分配8项已验收前置提交（数据解析、输入构建、建模、基准求解、增量重排、独立核验、KPI可视化、求解程序交付包）的登记结论与文件；本报告不重新执行求解或统计计算。</div>
+<nav class="sd-nav">
+<a href="#sec-summary">结论摘要</a><a href="#sec-scenario">需求对照</a><a href="#sec-deliverables">交付物总览</a><a href="#sec-model">模型版本与可解释性</a><a href="#sec-compliance">合规与性能</a><a href="#sec-kpi">KPI与重排成果</a><a href="#sec-integration">外部对接与实施</a><a href="#sec-limits">限制与迭代</a>
+</nav>
+
+<section class="sd-section" data-report-section="SEC_SUMMARY" id="sec-summary">
+<div class="sd-sec-head"><h2>1 结论摘要</h2><p class="sd-purpose">给出总体结论、3类验收标准结论与关键限制，便于决策者快速判断。</p></div>
+<p>本项目基于附件数据集完成了中粮可口可乐河北厂、陕西厂试点AI智慧排班核心场景的模型开发与验证：构建了版本化模型输入数据集与人员技能矩阵，将劳动合规等业务规则结构化为混合整数规划模型，完成62天多周期基准排班求解与多目标权重实验，实现插单、增产、换产、设备故障、员工突发离岗五类场景的秒级增量重排与多技能补位匹配，由独立核验程序对全部候选解按用户原始规则复算，输出KPI统计与多维可视化报告，并交付可在Linux命令行环境独立运行复现的求解程序包。全部结论基于规则驱动仿真样本，不构成实际工厂绩效证据。</p>
+<div class="sd-cards">
+<div class="sd-card"><h4>总体达成情况</h4><p>10项场景需求中第1至6项在本项目环境内实现并通过独立核验；第7项人力实时可视化为模拟演示口径；第8项调度算法已实现、推送与回传为模拟口径；第9、10项为机制设计加示例与统计实现。</p></div>
+<div class="sd-card"><h4>验收标准一：系统功能</h4><p>核心场景功能全部实现并经独立核验与交付包全新解压复现（六条命令全部退出码0）；系统上线运行属实施部署阶段，本环境未发生真实上线，外部系统对接为设计与模拟适配（SIMULATED）。</p></div>
+<div class="sd-card"><h4>验收标准二：合规约束</h4><p>7个核验对象逐人逐日复算，标准工时8小时/天、日加班上限3小时、月加班上限36小时、7天至少休1天、两班间隔不少于11小时等硬约束违例计数全部为0，达成100%满足。</p></div>
+<div class="sd-card"><h4>验收标准三：性能指标</h4><p>五类异常场景方案生成响应时间1.45~1.70秒（端到端不超过1.97秒），交付包复现2.62~2.72秒，全部小于60秒；62天两厂基准求解32.4秒、交付包复现42.6秒，均为分钟级。</p></div>
+</div>
+<div class="sd-finding" data-finding-id="C_OVERALL" data-evidence-refs="T_SCENARIO_MAP T_ACCEPTANCE_MAP T_COMPLIANCE T_PERFORMANCE T_VERSION"><div class="sd-fid">结论 C_OVERALL（证据：T_SCENARIO_MAP、T_ACCEPTANCE_MAP、T_COMPLIANCE、T_PERFORMANCE、T_VERSION）</div>10项场景需求中第1-6项在本项目环境内实现并通过独立核验，第7项为模拟演示口径，第8项为算法实现加模拟推送口径，第9、10项为机制设计加示例实现；3类验收标准中合规约束与性能指标达成，系统功能验收中核心场景功能全部实现但系统上线运行属实施部署阶段，本环境未发生真实上线。</div>
+<div class="sd-finding" data-finding-id="C_COMPLIANCE" data-evidence-refs="T_COMPLIANCE"><div class="sd-fid">结论 C_COMPLIANCE（证据：T_COMPLIANCE）</div>七类核验对象（FULL62-W1、RH7-W1与五类重排场景重建解）经独立程序按用户原始规则逐人逐日复算，标准工时8小时/天、日加班上限3小时、月加班上限36小时、7天至少休1天、两班间隔不少于11小时等硬约束违例计数全部为0；该结论基于已验收整班序列口径，非完整班值班日计入的更严口径另有10个员工×7天窗口组合作为统计项输出。</div>
+<div class="sd-finding" data-finding-id="C_PERFORMANCE" data-evidence-refs="T_PERFORMANCE"><div class="sd-fid">结论 C_PERFORMANCE（证据：T_PERFORMANCE）</div>五类异常场景方案生成响应时间1.45~1.70秒、端到端不超过1.97秒，全部小于60秒；62天两厂整周期基准求解32.4秒至最优（目标值与下界相等249870），交付包在全新解压目录复现solve-full耗时42.6秒且目标复算一致，排班耗时满足从人工小时级降至分钟级的验收目标。</div>
+<div class="sd-finding" data-finding-id="C_CAPACITY" data-evidence-refs="T_SCENARIO_MAP T_COMPLIANCE T_KPI"><div class="sd-fid">结论 C_CAPACITY（证据：T_SCENARIO_MAP、T_COMPLIANCE、T_KPI）</div>按台账定编与月加班36小时上限，392人月容量4704人班对月需求5518人班存在结构性缺口814人班（14.75%），62天口径覆盖率85.28%（求解口径）/85.03%（独立重建口径），缺口1753/1789人班为结构性结果，不构成100%覆盖承诺；缓解需外部用工、降低开班频率或调整合规参数等业务决策。</div>
+<div class="sd-finding" data-finding-id="C_MODEL_GOVERNANCE" data-evidence-refs="T_VERSION T_COMPLIANCE T_DELIVERABLES"><div class="sd-fid">结论 C_MODEL_GOVERNANCE（证据：T_VERSION、T_COMPLIANCE、T_DELIVERABLES）</div>模型版本链SCHEC-INPUT-V1.0→SCHEC-MIP-V1.0→SCHEC-SOLVE-V1.1→SCHEC-RESCHED-V1.0→SCHEC-VALID-V3.0→SCHEC-KPI-V1.0.1→SCHEC-PKG-V1.0完整可追溯，每条硬约束均有数学表达并对应C1-C13约束编号，求解参数、权重、终止状态、上下界与独立复算记录留档；12小时班计薪口径11小时=标准8小时+加班3小时+1小时用餐不计基于4683行恒等式核验。</div>
+<div class="sd-finding" data-finding-id="C_EXTERNAL_SYSTEMS" data-evidence-refs="T_SCENARIO_MAP T_VERSION T_INTEGRATION"><div class="sd-fid">结论 C_EXTERNAL_SYSTEMS（证据：T_SCENARIO_MAP、T_VERSION、T_INTEGRATION）</div>企业微信/短信、凌云塔考勤、MES、OCC与手环对接在本环境为设计与模拟适配（SIMULATED），交付包已生成六系统12份模拟报文且接口契约与适配设计随包交付，未与真实系统联调；分阶段实施建议为试点数据接入校准、真实系统接口联调、平行运行对比、上线切换四阶段推进。</div>
+<div class="sd-finding" data-finding-id="C_DATA_LIMITS" data-evidence-refs="T_SCENARIO_MAP T_VERSION"><div class="sd-fid">结论 C_DATA_LIMITS（证据：T_SCENARIO_MAP、T_VERSION）</div>输入为规则驱动仿真样本，结论不构成实际工厂绩效证据；订单与计划产量类6字段未填充，交期与产能目标按外部参数处理，插单与增产需求增量为外部参数假设；非完整班小时与整班之间的间隔和休息判定未建模；真实数据接入后需重建输入、重训练并平行对比。</div>
+</section>
+
+<section class="sd-section" data-report-section="SEC_SCENARIO_MAP" id="sec-scenario">
+<div class="sd-sec-head"><h2>2 10项场景需求与3类验收标准对照</h2><p class="sd-purpose">用户10项场景需求逐条说明实现方式（已实现/模拟演示/设计）、支撑成果与证据来源，并对照3类验收标准的达成情况。</p></div>
+<h3>2.1 10项场景需求达成情况对照</h3>
+<p>实现方式分为三类标注：<span class="sd-tag sd-tag-implemented">已实现</span>表示功能与算法在本项目环境内开发完成并经独立核验或交付包复现；<span class="sd-tag sd-tag-simulated">模拟演示</span>表示以模拟数据演示展示形态；<span class="sd-tag sd-tag-design">设计与模拟适配</span>表示机制、接口或通道以设计文档和模拟报文交付，未与真实系统联调。</p>
+<div class="sd-scroll">
+<table data-evidence-id="T_SCENARIO_MAP" aria-label="10项场景需求达成情况对照表">
+<thead><tr><th>编号</th><th>需求要点（依据用户原始请求）</th><th>实现方式</th><th>支撑成果与关键结果</th><th>证据来源</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>多目标排班优化：在交期、产能、人员合规、岗位技能（一人多岗）、非完整班次排班、换型等多目标约束下自动生成最优排班计划，并支持手工调整</td><td><span class="sd-tag sd-tag-implemented">已实现</span>（交期与产能因订单类字段未填充按外部参数处理）</td><td>SCHEC-MIP-V1.0多目标混合整数规划（62天全量168765变量、148325约束，硬约束C1-C13）；SCHEC-SOLVE-V1.1基准求解FULL62-W1至optimal（目标值249870，求解32.4 s，覆盖率85.28%）；非完整班次按M4小时粒度建模（8小时折1人班）、换型班次缺位附加惩罚；手工调整经锁定式增量重排实现（五场景全部optimal）</td><td>SCHEC-MIP-V1.0（结果dd333f79）、SCHEC-SOLVE-V1.1（结果2471c0cc）、SCHEC-RESCHED-V1.0（结果2af612f2）</td></tr>
+<tr><td>2</td><td>人员技能矩阵匹配：构建结构化人员能力画像，确保关键岗位不缺位</td><td><span class="sd-tag sd-tag-implemented">已实现</span></td><td>SCHEC-INPUT-V1.0：392名员工、738条员工-技能记录（236人具备跨岗认证）、996对员工-岗位资格（达标884对）、107个岗位白班与夜班达标资格覆盖不足均为0；补位推荐每空缺输出前5名候选，技能等级、岗位要求等级、证书有效期、夜班资格、画像累计在岗时长逐字段取自技能矩阵</td><td>SCHEC-INPUT-V1.0（结果bb6af21a）、SCHEC-RESCHED-V1.0（结果2af612f2、源代码9cf44b58）</td></tr>
+<tr><td>3</td><td>插单/故障秒级重排：针对高频异常事件，提供增量求解与建议生成，响应时间小于60秒</td><td><span class="sd-tag sd-tag-implemented">已实现</span></td><td>五类场景（插单、增产、换产、设备故障、员工突发离岗）锁定式增量重排全部求解至optimal，方案生成响应时间1.45~1.70 s、端到端不超过1.97 s；交付包内S1插单2.68 s、S4设备故障2.62 s、S5突发离岗2.72 s复现，全部小于60 s</td><td>SCHEC-RESCHED-V1.0（结果2af612f2）、SCHEC-VALID-V3.0（结果30a5f9b1）、SCHEC-PKG-V1.0（结果f82a3284）</td></tr>
+<tr><td>4</td><td>排班结果可视化与KPI追踪：通过甘特图、看板矩阵、日历视图等多维度展示排班结果</td><td><span class="sd-tag sd-tag-implemented">已实现</span></td><td>SCHEC-KPI-V1.0.1静态HTML报告：甘特图（周视图、产线视图）、看板矩阵、日历视图、覆盖率与工时结构等6幅PNG图表、13个表格证据、12个KPI统计CSV，单文件离线可预览</td><td>SCHEC-KPI-V1.0.1（结果4f9b361e、报告2deea673）</td></tr>
+<tr><td>5</td><td>排班约束条件结构化：将工时合规、加班上限、休息间隔等劳动法规约束转化为数学约束模型</td><td><span class="sd-tag sd-tag-implemented">已实现</span></td><td>SCHEC-MIP-V1.0将标准工时8小时/天、日加班上限3小时、月加班上限36小时（等价每人每月至多12个12小时班）、7天至少休1天、两班间隔不少于11小时及技能资格、持证上岗、夜班资格等结构化为C1-C13约束，逐条对应H1-H7等规则字典并可追溯数据字段；独立核验程序复算违例全部为0</td><td>SCHEC-MIP-V1.0（结果dd333f79）、SCHEC-VALID-V3.0（结果30a5f9b1、报告4c34632a）</td></tr>
+<tr><td>6</td><td>AI运筹求解模型版本管理与算法可解释性过程报告输出；自动分析人员工时按工厂、部门、岗位、个人级别，实时展示制造生产力、工时情况与加班工时排名、加班平衡</td><td><span class="sd-tag sd-tag-implemented">已实现</span>（产量口径制造生产力不可计算，以替代口径说明）</td><td>版本链7个版本标识与参数、权重、求解状态留档；模型说明书含约束与业务规则逐条对应表、假设A1-A15；KPI按工厂、部门、岗位、个人级统计（392人全量排名），加班平衡指标（平均65.64 h、基尼系数0.0883、P90/P10=1.0、月加班超36小时人月数0）；因订单与计划产量字段未填充，产量口径制造生产力不可计算，以生产工时占比68.26%、覆盖率与容量利用率替代并说明</td><td>SCHEC-MIP-V1.0、SCHEC-SOLVE-V1.1、SCHEC-KPI-V1.0.1（结果4f9b361e、报告2deea673）</td></tr>
+<tr><td>7</td><td>人力实时可视化：动态展示各产线在岗人员、工位到岗、人员异常及调度信息</td><td><span class="sd-tag sd-tag-simulated">模拟演示</span></td><td>以模拟快照数据（realtime_snapshot_sim.csv）与演示口径在KPI报告中呈现各产线在岗、到岗、异常与调度信息展示形态；真实实时数据接入依赖考勤与MES系统联调，属实施阶段</td><td>SCHEC-KPI-V1.0.1（结果4f9b361e、报告2deea673）</td></tr>
+<tr><td>8</td><td>生产异动智能人员调度：员工离岗自动匹配多技能人员推荐补位，针对增产、换产、设备故障场景输出人员调度方案，支持手环推送调度指令，调度执行状态实时回传</td><td><span class="sd-tag sd-tag-implemented">算法已实现</span>；<span class="sd-tag sd-tag-design">推送与回传为模拟</span></td><td>五场景重排与基于技能矩阵的多技能补位匹配算法已实现并通过独立核验（S5突发离岗取消6条/补位5条，剩余缺口如实保留）；手环等设备推送通道与执行状态回传为设计与模拟适配（SIMULATED），交付包生成六系统12份模拟报文</td><td>SCHEC-RESCHED-V1.0（结果2af612f2）、SCHEC-VALID-V3.0、SCHEC-PKG-V1.0（ZIP b012576f）</td></tr>
+<tr><td>9</td><td>人员画像动态迭代优化：采集现场调度执行结果，反向反馈更新人员技能矩阵，持续完善人员能力画像</td><td><span class="sd-tag sd-tag-design">机制设计</span>加示例实现</td><td>employee_skill_profile画像字段与U1-U5更新规则（累计在岗时长按已执行调度回传累计、跨岗记录与200 h等级提升建议、证书到期处理、HR主档隔离、逐笔更新日志）、profile_update_demo.csv更新示例、推荐-执行-画像更新-再推荐闭环设计</td><td>SCHEC-RESCHED-V1.0（结果2af612f2、归档设计7df703e3）</td></tr>
+<tr><td>10</td><td>调度操作全量数据归档：完整留存所有人员调度记录，支持历史调度查询、追溯与统计分析（能力清单、经验展示如水线吹瓶累计在岗时间、技能学习推荐）</td><td><span class="sd-tag sd-tag-design">机制设计</span>加统计实现</td><td>dispatch_record全量归档结构（append-only，事件、推送、执行状态、版本字段与A1-A4规则）、schedule_version方案版本表；能力清单与经验统计已实现（ability_experience_stats.csv，按岗位统计画像累计在岗时长，支持能力清单与经验展示）；技能学习推荐以画像更新规则输出</td><td>SCHEC-RESCHED-V1.0（结果2af612f2）、SCHEC-KPI-V1.0.1（结果4f9b361e）</td></tr>
+</tbody>
+</table>
+</div>
+<h3>2.2 3类验收标准达成情况对照</h3>
+<div class="sd-scroll">
+<table data-evidence-id="T_ACCEPTANCE_MAP" aria-label="3类验收标准达成情况对照表">
+<thead><tr><th>验收标准</th><th>标准内容（依据用户原始请求）</th><th>达成情况</th><th>证据与限制</th></tr></thead>
+<tbody>
+<tr><td>1 系统功能验收</td><td>核心场景（人员技能矩阵匹配、插单/故障秒级重排、排班结果可视化与KPI追踪、排班约束条件结构化、AI模型管理与算法过程解释、排班结果全量数据归档统计分析）全部实现并上线运行</td><td>核心场景功能全部实现；上线运行未发生</td><td>上述六项核心场景功能均已实现并通过独立核验；求解程序交付包SCHEC-PKG-V1.0在全新解压目录按README六条命令逐条复现，全部退出码0（solve-full目标复算249870.0与登记值一致、verify-baseline七项硬约束0违例）。本环境无外部系统访问权限，凌云塔、MES、OCC、企业微信/短信、手环对接均为设计与模拟适配（SIMULATED），系统上线运行属实施部署阶段。证据：交付包结果f82a3284、独立核验报告4c34632a。</td></tr>
+<tr><td>2 合规约束验收</td><td>排班结果100%满足硬约束条件（标准工时8小时/天、加班上限3小时/天、月加班上限36小时、7天至少休1天、两班间隔不少于11小时）</td><td><span class="sd-tag sd-tag-implemented">达成</span></td><td>独立核验程序SCHEC-VALID-V3.0（未导入任何求解代码）对FULL62-W1、RH7-W1与五类重排场景重建解共7个核验对象逐人逐日复算，五类劳动合规硬约束及技能资格、夜班资格、一人一天一班违例计数全部为0。口径说明：12小时班计薪11小时=标准8小时+加班3小时+1小时用餐不计（4683行恒等式核验成立）；休息与间隔按已验收整班序列口径判定，非完整班值班日计入的更严口径下FULL62-W1存在10个员工×7天窗口组合（涉及7名员工），已作为统计项输出。证据：核验结果30a5f9b1、报告4c34632a。</td></tr>
+<tr><td>3 性能指标验收</td><td>突发重排响应时间小于60秒，排班耗时从人工小时级降至分钟级</td><td><span class="sd-tag sd-tag-implemented">达成</span></td><td>五类异常场景方案生成响应时间1.45~1.70 s、含独立核验端到端不超过1.97 s；交付包内S1/S4/S5复现2.68/2.62/2.72 s，全部小于60 s。62天两厂整周期基准求解32.4 s至最优（mip_gap=0，目标值与下界相等），交付包全新解压复现solve-full耗时42.6 s且目标复算一致；滚动时域7天窗口九窗合计54.2 s、14天窗口五窗合计61.0 s。测量口径：time.perf_counter分段壁钟时间，一次性数据加载约5.2 s不计入（生产环境常驻内存假设），即使计入仍小于60 s。证据：结果2471c0cc、30a5f9b1、f82a3284。</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="sd-section" data-report-section="SEC_DELIVERABLES" id="sec-deliverables">
+<div class="sd-sec-head"><h2>3 交付物与版本总览</h2><p class="sd-purpose">列示各阶段交付物、版本标识、关键文件与永久标识，形成成果索引。</p></div>
+<p>全部交付物均通过平台正式Python结果或阶段报告候选登记并经唯一验收方验收通过；文件清单均附SHA-256校验值。下表列出各阶段代表性交付文件与永久标识（结果标识为Python执行结果result_uid，文件标识为已验收成果永久标识）。</p>
+<div class="sd-scroll">
+<table data-evidence-id="T_DELIVERABLES" aria-label="交付物与版本总览表">
+<thead><tr><th>阶段</th><th>版本标识</th><th>关键文件</th><th>永久标识</th><th>SHA-256或规模</th></tr></thead>
+<tbody>
+<tr><td>数据集解析与质量评估</td><td>清洗数据集（V1.0口径）</td><td>cleaned_01至cleaned_07标准化CSV、质量问题清单、数据结构与质量报告等14个文件</td><td>结果1a79c492-4ff5-43aa-b99f-802be77f10c9</td><td>主数据集4683行×78列</td></tr>
+<tr><td>排班模型输入数据构建</td><td>SCHEC-INPUT-V1.0</td><td>input_01至input_12（人员主档、资格、证书、岗位需求、班次定义、日历、运行计划、合规参数、换型标准、初始参考、外部参数声明、容量测算）、build_specification.md、file_manifest.csv共14个文件</td><td>结果bb6af21a-d084-4be7-a66d-c444785f01e4</td><td>清单文件f52dade1</td></tr>
+<tr><td>约束结构化与优化建模</td><td>SCHEC-MIP-V1.0</td><td>模型说明书、可执行建模代码、62天全量LP、演示实例LP、演示解明细、独立核验报告共6个文件</td><td>结果dd333f79-6af3-463b-9df4-02cc084ebdcb</td><td>62天LP文件22bbce55，51792503 B，SHA-256 3155f429…</td></tr>
+<tr><td>基准排班求解与多目标实验</td><td>SCHEC-SOLVE-V1.1</td><td>基准方案明细、滚动对照方案、实验汇总、求解日志、可复现实验程序共5个文件</td><td>结果2471c0cc-317d-46cb-82e8-734f3ce0c3d9</td><td>基准文件44156ce7，SHA-256 4c59a1fd…</td></tr>
+<tr><td>插单故障快速重排与补位调度</td><td>SCHEC-RESCHED-V1.0</td><td>场景实验结果、变更明细、补位推荐、画像更新示例、归档设计、重排报告、运行日志共7个文件及源代码incremental_rescheduling.py</td><td>结果2af612f2-948f-4f5c-8883-4ca70b4a67f6；源代码9cf44b58-d6dc-4f6d-8c6d-867ae2c2e829</td><td>源代码SHA-256 c0267bcb…</td></tr>
+<tr><td>排班方案独立核验与性能评估</td><td>SCHEC-VALID-V3.0</td><td>7对象×10项约束核验明细、目标复算、场景与响应时间复核、输入勾稽、问题建议、汇总、2幅PNG与HTML报告共13个文件</td><td>结果30a5f9b1-55e9-4617-a338-6c4837bdb1ff；报告4c34632a-3011-445f-97af-fc96411f3f26</td><td>报告SHA-256 99f45b3b…</td></tr>
+<tr><td>排班KPI统计与多维可视化</td><td>SCHEC-KPI-V1.0.1</td><td>12个KPI统计CSV、6幅PNG图表、统计程序kpi_analysis_program.py、静态HTML可视化报告</td><td>结果4f9b361e-28f2-4970-a816-380c16b71d19；报告2deea673-c3bf-413b-8b60-cbf01362dc4f（文件fb48643a）</td><td>报告683000 B，SHA-256 5b917cce…</td></tr>
+<tr><td>求解程序交付包</td><td>SCHEC-PKG-V1.0</td><td>solver_package_SCHEC-PKG-V1.0.zip（26个成员：源码、配置、输入数据、示例事件、接口契约设计、依赖与使用说明、运行报告）</td><td>结果f82a3284-e895-4754-a344-b834f91ef86f；ZIP文件b012576f-3a25-4d22-babb-57d7998e8b35</td><td>2811160 B，SHA-256 6665f7da…</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="sd-section" data-report-section="SEC_MODEL_GOVERNANCE" id="sec-model">
+<div class="sd-sec-head"><h2>4 模型版本管理与算法可解释性</h2><p class="sd-purpose">说明模型结构、硬约束C1-C13与业务规则对应、多目标权重、求解参数、版本链与过程记录，满足模型版本管理与算法可解释性要求。</p></div>
+<h3>4.1 模型结构与硬约束结构化</h3>
+<p>SCHEC-MIP-V1.0为混合整数规划模型，决策变量覆盖人员-岗位-日期-班次0-1指派（105122个）、值班（45700个）、岗位缺口（11794个）、非完整班次小时（6147个）与工时统计变量；62天全量模型共168765个变量、148325条约束。每条业务硬约束均有对应数学表达并可追溯到用户规则或数据字段：标准工时8小时/天与日加班上限3小时（C3/C4，对应H1/H2）、两班间隔不少于11小时（C5，按排班序列时间戳判定）、任意连续7个日历日至少休1天（C6，滚动窗口）、月加班上限36小时等价每人每月至多12个12小时班（C7，派生参数36/3）、岗位技能资格（C8，同厂且技能等级不低于岗位要求等级，达标资格884对）、持证上岗证书有效期（C9）、夜班资格（C10，356名可上夜班员工）、常白班模式（C11）、非完整班次按小时粒度且不用于关键岗（C12）、岗位覆盖允许缺口以暴露结构性容量缺口（C1）。</p>
+<p>12小时班制与8小时标准工时加3小时加班规则的组合口径在模型说明书假设A1-A15中明确：12小时班计薪11小时=标准工时8小时+当日加班3小时+1小时用餐不计工时，该恒等式在4683行样本中全部核验成立；若业务改为按在岗12小时计加班，容量将进一步收紧，需重新计算派生参数。两班间隔与休息约束按重构的按人按日排班序列计算，不使用存在口径问题的数据集原值列（前置质量问题Q02/Q03）。</p>
+<h3>4.2 多目标权重与求解过程记录</h3>
+<p>多目标采用加权合并方案：关键岗位缺位惩罚100/人班、一般岗位缺位40/人班、换型班次缺位附加20/人班、加班工时5/h、工时均衡（62天计薪工时极差）2/h、人员利用率奖励1/人班（目标函数中取负号），权重按数量级分离实现近似字典序优先关系，全部为代码内可配置参数；说明书同时给出ε-约束法与分层求解备选方案。求解过程留档内容包括：求解器与版本（HiGHS 1.15.1，pyomo 6.10.1接口，进程内不导入ortools以规避已确认的原生库冲突）、时限、终止状态、目标值与下界、逐窗耗时与核验结论（solver_experiments_summary.csv、solver_run_log.txt、incremental_run_log.txt、交付包运行报告）。多目标权重实验结论：FULL62-W2（利用率权重1→20）与W1最优解相同，表明覆盖率由月加班上限派生的人班容量约束主导；FULL62-W3（均衡权重2→20）将单人计薪工时极差由136 h降至51 h，代价是关键岗缺口增加15人班，为容差内近优（gap约9.9e-5）。</p>
+<h3>4.3 版本链与参数记录</h3>
+<div class="sd-scroll">
+<table data-evidence-id="T_VERSION" aria-label="模型版本链与关键参数记录表">
+<thead><tr><th>版本标识</th><th>内容</th><th>输入版本</th><th>关键参数或规模</th></tr></thead>
+<tbody>
+<tr><td>SCHEC-INPUT-V1.0</td><td>版本化模型输入数据集：人员主档、资格、证书、岗位需求、班次定义、62天日历、运行计划、合规与业务参数（H1-H7、M1-M4、G1-G3、C1-C3、P1-P3及派生容量参数）、换型标准、初始排班参考、外部参数声明、容量测算</td><td>原始附件V1.0（SHA-256 3f2c97ae…）及已验收解析结果</td><td>392人、996对资格（达标884）、107岗位、18产线×62天×2班共2232行运行计划；月容量4704人班对月需求5518人班</td></tr>
+<tr><td>SCHEC-MIP-V1.0</td><td>排班优化混合整数规划模型：变量、参数、目标权重、硬约束C1-C13与业务规则逐条对应表、假设A1-A15、可执行建模代码与LP模型文件</td><td>SCHEC-INPUT-V1.0口径</td><td>62天全量168765变量、148325约束；权重100/40/+20/5/2/-1；演示实例求解optimal（目标1460）</td></tr>
+<tr><td>SCHEC-SOLVE-V1.1</td><td>基准排班求解与多目标实验：整周期最优解、权重对比、7天与14天滚动时域策略</td><td>SCHEC-MIP-V1.0、原始附件</td><td>FULL62-W1最优目标249870（incumbent=bound），求解32.4 s；9693指派+466非完整折算+1753缺口=11912人班</td></tr>
+<tr><td>SCHEC-RESCHED-V1.0</td><td>锁定式增量重排与补位匹配算法：五类异常场景、跨窗边界处理、独立核验、补位推荐、画像更新与归档设计</td><td>FULL62-W1基准方案（44156ce7）、SCHEC-MIP-V1.0</td><td>求解器时限45 s；五场景全部optimal，响应1.45~1.70 s；解锁104~133单元、固定12579~12885变量</td></tr>
+<tr><td>SCHEC-VALID-V3.0</td><td>独立核验与性能评估：独立程序按用户原始规则逐人逐日复算7个核验对象</td><td>FULL62-W1、RH7-W1、五场景重建解、input_04×input_07</td><td>7对象×10项核验违例全部为0；目标复算249870.0与求解器一致；双口径需求11912/11948人班</td></tr>
+<tr><td>SCHEC-KPI-V1.0.1</td><td>排班KPI统计与多维可视化：工厂、部门、岗位、个人级工时与加班统计、甘特图、看板矩阵、日历视图</td><td>FULL62-W1、五场景调度变更、技能矩阵画像口径</td><td>计薪总工时107003.0 h；平均利用率99.79%；容量利用率91.17%；覆盖率双口径85.28%/85.03%</td></tr>
+<tr><td>SCHEC-PKG-V1.0</td><td>可独立运行复现的Linux命令行求解程序包：源码、配置、输入、示例事件、接口契约设计、依赖与使用说明</td><td>SCHEC-INPUT-V1.0口径输入与已验收模型、算法</td><td>ZIP 26成员、2811160 B；README六条命令全新解压复现全部退出码0；solve-full 42.6 s复现目标249870.0</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="sd-section" data-report-section="SEC_COMPLIANCE_PERF" id="sec-compliance">
+<div class="sd-sec-head"><h2>5 合规与性能核验结论</h2><p class="sd-purpose">汇总独立核验的硬约束0违例结论、目标复算一致性、响应时间与求解耗时复核结果。</p></div>
+<h3>5.1 劳动合规硬约束独立核验</h3>
+<p>独立核验程序SCHEC-VALID-V3.0未导入任何求解代码，按用户原始规则从解的指派明细重构按人按日排班序列逐人逐日复算。核验项共10项：标准工时8小时/天、日加班上限3小时、月加班上限36小时（每人每月12小时班不超过12班）、7天至少休1天、两班间隔不少于11小时、技能资格（同厂且等级达标）、夜班资格、一人一天一班、岗位覆盖等式（含非完整班Σf/8折算）等。</p>
+<div class="sd-scroll">
+<table data-evidence-id="T_COMPLIANCE" aria-label="劳动合规硬约束独立核验结果表">
+<thead><tr><th>核验对象</th><th>核验项</th><th>违例计数</th><th>核验程序与口径</th></tr></thead>
+<tbody>
+<tr><td>FULL62-W1（62天整周期基准方案）</td><td>10项（五类劳动合规硬约束+技能资格+夜班资格+一人一天一班+覆盖等式）</td><td class="sd-num">0</td><td rowspan="7">SCHEC-VALID-V3.0独立程序（未导入求解代码），按用户原始规则重构排班序列逐人逐日复算；12小时班计薪11 h=标准8 h+加班3 h+1 h用餐不计；休息与间隔按已验收整班序列口径判定</td></tr>
+<tr><td>RH7-W1（7天滚动窗口方案）</td><td>10项</td><td class="sd-num">0</td></tr>
+<tr><td>S1插单场景重建解（SX-QC线2026-07-12白班恢复开班）</td><td>10项</td><td class="sd-num">0</td></tr>
+<tr><td>S2增产场景重建解（SX-CAN01线2026-07-21每岗每班增1人）</td><td>10项</td><td class="sd-num">0</td></tr>
+<tr><td>S3换产场景重建解（HB-PET01线2026-07-20白班新增换型B级）</td><td>10项</td><td class="sd-num">0</td></tr>
+<tr><td>S4设备故障场景重建解（SX-PET01线2026-07-21至23停线）</td><td>10项</td><td class="sd-num">0</td></tr>
+<tr><td>S5突发离岗场景重建解（EMPHB0325离岗7天）</td><td>10项</td><td class="sd-num">0</td></tr>
+</tbody>
+</table>
+</div>
+<div class="sd-note sd-warn">口径说明：非完整班值班日计入休息判定的更严口径下，FULL62-W1存在10个员工×7天窗口组合（涉及7名员工、非完整小时104 h，占全部非完整小时3728 h的2.79%），已作为统计项而非约束违例输出；该口径是否采用需业务确认后统一修订模型版本。目标函数复算：FULL62-W1按W1权重复算为249870.0，与求解器报告一致（绝对差0），方案内部恒等式9693+466+1753=11912成立。</div>
+<h3>5.2 性能指标复核</h3>
+<div class="sd-scroll">
+<table data-evidence-id="T_PERFORMANCE" aria-label="性能指标实测与目标对照表">
+<thead><tr><th>指标</th><th>实测值</th><th>目标</th><th>测量口径</th></tr></thead>
+<tbody>
+<tr><td>五类异常场景方案生成响应时间</td><td class="sd-num">1.45~1.70 s</td><td>&lt;60 s</td><td>time.perf_counter分段壁钟时间：场景配置+窗口建模+变量锁定与边界处理+求解+解提取；一次性数据加载约5.2 s不计入（生产环境常驻内存假设），即使计入仍小于60 s</td></tr>
+<tr><td>五类异常场景端到端时间（含独立核验）</td><td class="sd-num">≤1.97 s</td><td>&lt;60 s</td><td>方案生成时间另加全期独立核验耗时</td></tr>
+<tr><td>交付包内重排复现（S1插单/S4设备故障/S5突发离岗）</td><td class="sd-num">2.68/2.62/2.72 s</td><td>&lt;60 s</td><td>最终ZIP在全新解压目录实际运行</td></tr>
+<tr><td>62天两厂整周期基准求解</td><td class="sd-num">32.4 s（optimal，目标=下界249870）</td><td>分钟级</td><td>HiGHS求解，mip_gap=0，另建模2.6 s</td></tr>
+<tr><td>交付包solve-full复现</td><td class="sd-num">42.6 s</td><td>分钟级</td><td>全新解压目录运行，目标复算249870.0与登记值一致、KPI 11项一致</td></tr>
+<tr><td>滚动时域策略（RH7九窗/RH14五窗）</td><td class="sd-num">54.2 s / 61.0 s</td><td>分钟级</td><td>各窗口全部optimal，拼接方案独立核验通过，适用于增量重排场景</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="sd-section" data-report-section="SEC_KPI_RESCHED" id="sec-kpi">
+<div class="sd-sec-head"><h2>6 KPI统计、可视化与重排补位成果</h2><p class="sd-purpose">引用KPI统计、多维可视化、增量重排与补位调度成果及双口径说明。</p></div>
+<h3>6.1 62天试点排班KPI统计结论</h3>
+<div class="sd-scroll">
+<table data-evidence-id="T_KPI" aria-label="62天试点排班KPI统计汇总表">
+<thead><tr><th>指标</th><th>数值</th><th>单位</th><th>口径说明</th></tr></thead>
+<tbody>
+<tr><td>计薪总工时</td><td class="sd-num">107003.0</td><td>h</td><td>整班计薪103275.0 h+非完整班3728.0 h</td></tr>
+<tr><td>标准工时</td><td class="sd-num">77544.0</td><td>h</td><td>12小时班计薪11 h=标准8 h+加班3 h+1 h用餐不计</td></tr>
+<tr><td>加班工时</td><td class="sd-num">25731.0</td><td>h</td><td>整班口径；月加班超36 h人月数为0</td></tr>
+<tr><td>非完整班工时</td><td class="sd-num">3728.0</td><td>h</td><td>折算466人班计入覆盖</td></tr>
+<tr><td>生产工时占比</td><td class="sd-num">68.26</td><td>%</td><td>产量口径制造生产力因订单与计划产量字段未填充不可计算，以本指标替代并说明</td></tr>
+<tr><td>平均人员利用率</td><td class="sd-num">99.79</td><td>%</td><td>整班计薪工时除以264 h名义容量；392人全部上岗</td></tr>
+<tr><td>容量利用率</td><td class="sd-num">91.17</td><td>%</td><td>相对月加班上限派生的合规容量</td></tr>
+<tr><td>岗位覆盖率（双口径）</td><td class="sd-num">85.28 / 85.03</td><td>%</td><td>求解口径需求11912人班；input_04×input_07独立重建口径需求11948人班（差36人班/36单元，集中HB-QC2四个班次与SX-QC两个班次）</td></tr>
+<tr><td>缺口人班（双口径）</td><td class="sd-num">1753 / 1789</td><td>人班</td><td>结构性人力容量不足（名义容量9408对需求11912人班），关键岗缺口990（台账岗位类别口径）/1045（input_04是否关键岗口径）</td></tr>
+<tr><td>加班平衡</td><td class="sd-num">均值65.64；极差72.0；基尼0.0883；P90=P10=72.0；P90/P10=1.0</td><td>h（均值、极差、分位值）</td><td>392人个人级整班数、计薪工时、分月加班与利用率全量排名输出</td></tr>
+</tbody>
+</table>
+</div>
+<h3>6.2 多维可视化成果</h3>
+<p>SCHEC-KPI-V1.0.1静态HTML报告以甘特图（周视图与产线视图）、看板矩阵、日历视图、覆盖率对比、工时结构与加班平衡共6幅PNG图表和13个表格证据呈现排班结果，全部图表哈希与数值来自结构化统计结果；报告为单文件离线HTML，可在浏览器离线预览。实时类展示（在岗、到岗、手环回传）在报告中逐处声明为模拟或设计口径。</p>
+<h3>6.3 增量重排与补位调度成果</h3>
+<p>五类异常场景均以已验收基准方案FULL62-W1为初始解做锁定式增量重排，仅解锁事件影响单元与同厂7天窗口内基准缺口单元，边界处理复用滚动时域方法（夜班后次日早班禁排、月12小时班上限跨窗累计、连续7天休息前缀后缀衔接）。重排前后对比与受影响人员清单共206行：S1插单新增6人班需求在当前人力下全部转为缺口（关键岗缺口990→996，结构性结果）；S2增产8名人员重派；S3换产非完整班人力3728→3768 h、缺口1753→1748；S4设备故障取消37条新增28条指派、30人受影响、覆盖率85.28%→85.51%；S5突发离岗取消6条指派、补位5条，剩余1人班缺口如实保留。补位推荐每空缺前5名候选，技能等级、岗位要求等级、证书有效期、可胜任夜班、画像累计在岗时长逐字段取自人员技能矩阵，推荐得分由等级余量、证书、窗口空闲天数与画像负载构成。交付包内S1插单示例在当前结构性饱和数据下不产生指派变更（取消0/新增0），仅验证响应链路，对外演示时须同时说明。</p>
+</section>
+
+<section class="sd-section" data-report-section="SEC_INTEGRATION" id="sec-integration">
+<div class="sd-sec-head"><h2>7 外部系统对接与分阶段实施建议</h2><p class="sd-purpose">说明凌云塔考勤、MES、OCC、企业微信/短信、手环的接口契约与模拟适配状态，给出分阶段实施建议。</p></div>
+<p>本环境无外部系统访问权限，全部对接内容以接口契约设计文档与模拟适配层（SIMULATED）随交付包交付；交付包重排运行已生成六系统共12份模拟报文，覆盖推送、锁定与状态回传报文形态。以下状态均为设计与模拟适配，未与真实系统联调。</p>
+<div class="sd-scroll">
+<table data-evidence-id="T_INTEGRATION" aria-label="外部系统对接状态与实施建议表">
+<thead><tr><th>外部系统</th><th>对接内容</th><th>当前状态</th><th>实施建议</th></tr></thead>
+<tbody>
+<tr><td>凌云塔排班/考勤系统</td><td>排班结果推送、锁定、临时调整与考勤数据回传</td><td><span class="sd-tag sd-tag-design">设计与模拟适配（SIMULATED）</span></td><td>联调阶段替换模拟适配层为真实接口，核对推送、锁定与临时调整状态回传一致性；以真实考勤数据重建人员可用性输入</td></tr>
+<tr><td>MES执行系统</td><td>生产计划、产线开停班状态与执行结果回传</td><td><span class="sd-tag sd-tag-design">设计与模拟适配（SIMULATED）</span></td><td>以真实订单与运行计划数据重建需求增量（替换插单、增产场景的外部参数假设）并重新验证方案质量与响应时间</td></tr>
+<tr><td>OCC系统</td><td>排班与人员调度协同</td><td><span class="sd-tag sd-tag-design">设计与模拟适配（SIMULATED）</span></td><td>纳入联调范围，确认数据契约与调度指令流转边界</td></tr>
+<tr><td>企业微信/短信通知</td><td>排班结果与调度指令通知</td><td><span class="sd-tag sd-tag-design">设计与模拟适配（SIMULATED，交付包含12份模拟报文）</span></td><td>联调通知模板、送达与确认回执；异常场景通知与重排结果联动</td></tr>
+<tr><td>手环等设备</td><td>调度指令推送与执行状态实时回传</td><td><span class="sd-tag sd-tag-design">设计口径（未实机推送）</span></td><td>实机测试推送链路与回传时延；回传数据接入画像更新闭环（U1-U5规则）</td></tr>
+</tbody>
+</table>
+</div>
+<h3>分阶段实施建议</h3>
+<ol>
+<li><strong>阶段一 数据接入与校准：</strong>接入真实台账、运行计划、考勤与订单数据，替换外部参数假设；向数据提供方索取订单类字段填充版本、近7日休息天数生成逻辑、间隔0值口径、累计在岗时长时点口径；统一需求口径（ISS-01，36人班差异定位HB-QC2四个班次与SX-QC两个班次）与关键岗判定口径（ISS-02，差异岗位SX-ENG-BOILER、HB-ENG2-BOILER），定义主引用口径并附双口径对照。</li>
+<li><strong>阶段二 系统接口联调：</strong>按上表替换SIMULATED适配层为真实接口，完成凌云塔、MES、OCC、企业微信/短信与手环通道联调，验证推送、锁定、回传全流程闭环。</li>
+<li><strong>阶段三 平行运行对比：</strong>与现有人工排班平行运行，以真实数据重训练与重求解，对比覆盖率、合规、加班与响应时间指标，校准模型参数与权重。</li>
+<li><strong>阶段四 上线切换与持续迭代：</strong>分厂分线切换上线，启用调度记录全量归档与技能画像反馈闭环（推荐-执行-画像更新-再推荐），按月评估容量缺口并输出外部用工或开班频率决策建议。</li>
+</ol>
+</section>
+
+<section class="sd-section" data-report-section="SEC_LIMITS_NEXT" id="sec-limits">
+<div class="sd-sec-head"><h2>8 限制与后续迭代方向</h2><p class="sd-purpose">列明数据缺口、口径问题、模型修订建议与技能画像反馈闭环等后续迭代方向。</p></div>
+<h3>8.1 适用限制</h3>
+<ul>
+<li>全部输入为规则驱动仿真样本（数据来源系统均为仿真排班引擎），结论不构成实际工厂绩效证据；上线前需以真实考勤、MES、订单数据重训练并平行对比。</li>
+<li>系统功能验收标准中的上线运行属实施部署阶段：本报告证明核心场景功能在交付包中实现并经全新解压复现，不能证明已上线运行。</li>
+<li>覆盖率与关键岗缺口存在双口径（85.28%/85.03%、990/1045人班），对外引用须注明口径；36人班需求差异集中HB-QC2与SX-QC共6个班次。</li>
+<li>结构性人力容量缺口（月814人班、14.75%）在现有人力与合规参数下不可消除；62天口径缺口1753/1789人班，不构成100%覆盖承诺。</li>
+<li>非完整班小时与整班之间的间隔和休息判定未建模；更严口径统计项（10个员工×7天窗口组合）已输出，是否修订需业务确认。</li>
+<li>S1插单示例在当前结构性饱和数据下不产生指派变更；S2增产与S3换产事件未在最终包单独运行归档（五事件共用同一重排入口与核验流程，S1、S4、S5已有运行证据）。</li>
+<li>外部系统对接为设计与模拟适配，未与真实系统联调；推送与执行状态回传为模拟口径。</li>
+<li>订单与计划产量类6字段未填充，交期与产能目标按外部参数处理；插单与增产需求增量为外部参数假设。FULL62-W3为容差内近优（gap约9.9e-5），滚动时域拼接方案可行但非全局最优。常白班时长参数与班次定义存在1小时口径差异，使间隔判定偏保守。</li>
+</ul>
+<h3>8.2 后续迭代方向</h3>
+<ul>
+<li><strong>口径统一：</strong>统一定义覆盖率与关键岗缺口主引用口径并随解交付逐单元需求矩阵；在交付文件中明确标注关键岗判定字段来源。</li>
+<li><strong>模型修订：</strong>确认C6休息口径是否计入非完整班值班日；评估非完整班与整班之间间隔和休息判定的建模必要性；统一常白班时长参数与班次定义。</li>
+<li><strong>数据补充：</strong>向数据提供方索取订单类字段填充版本、近7日休息天数生成逻辑、距上次下班间隔0值口径、累计在岗时长时点口径；概览统计补全。</li>
+<li><strong>技能画像反馈闭环：</strong>真实调度执行结果接入后启用U1-U5画像更新规则与profile_update_log，持续完善人员能力画像并反哺补位推荐。</li>
+<li><strong>容量与补位决策：</strong>在敏感性分析中补充随机缺勤情景量化缺口区间；研究窗口空闲软惩罚、跨厂候选与多技能培养以增加补位深度；外部用工或降低开班频率方案经业务确认后进入模型参数。</li>
+<li><strong>演示与证据补强：</strong>对S2增产与S3换产事件在最终包各运行一次并归档结果；构造能产生实际指派变更的插单示例事件并留档运行记录。</li>
+</ul>
+<div class="sd-na">
+<strong>不适用证据说明：</strong>
+<span data-not-applicable-evidence="PYTHON_RESULT_CHART">PYTHON_RESULT_CHART：本报告为汇总型综合交付报告，图表证据已在KPI可视化与独立核验两份已验收阶段报告中呈现，本报告不新增计算图形。</span>；
+<span data-not-applicable-evidence="DATA_UNDERSTANDING">DATA_UNDERSTANDING：数据理解证据已在已验收的数据解析阶段形成，本报告仅引用其结论。</span>；
+<span data-not-applicable-evidence="DATA_PREPARATION">DATA_PREPARATION：输入构建证据已在SCHEC-INPUT-V1.0验收中形成，本报告仅引用。</span>；
+<span data-not-applicable-evidence="MODEL_EVALUATION">MODEL_EVALUATION：求解实验与模型评价证据已在基准求解与独立核验阶段形成，本报告引用其结论与关键数值。</span>
+</div>
+<p class="sd-sub" style="margin-top:18px">编制口径：本报告全部数值引用自已验收前置成果的登记值（8项已验收提交），未重新执行求解或统计计算；报告版本SCHEC-DELIVERY-V1.0。</p>
+</section>
+</div>
+</body>
+</html>

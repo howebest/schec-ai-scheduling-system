@@ -1,0 +1,13 @@
+﻿scenario_code,schedule_id,scenario_name,scenario_family,comparison_group,demand_profile,coverage_target_pct,demand_person_shifts,covered_person_shifts,gap_person_shifts,coverage_rate_pct,paid_hours_h,standard_hours_h,overtime_hours_h,overtime_share_pct,simulated_labor_cost_cny,cost_per_covered_shift_cny,labor_efficiency_shifts_per_100h,labor_hour_utilization_pct,coverage_balance_score,hours_gini,hours_range_h,satisfaction_average_1_to_5,satisfaction_response_count,compliance_rate_pct,rule_violation_count,source_type,independent_validation
+SC01,DEMO-SC01,均衡基准,常规生产,baseline-demand,稳定需求,96.0,672.0,645.0,27.0,95.98,5255.0,5160.0,95.0,1.81,185587.5,287.73,12.274,35.55,89.62,0.0308,16.0,4.0,30,100.0,0,synthetic_demo,未执行
+SC02,DEMO-SC02,成本优先,成本控制,baseline-demand,稳定需求,82.0,672.0,551.0,121.0,81.99,4408.0,4408.0,0.0,0.0,154280.0,280.0,12.5,85.56,80.91,0.1347,104.0,3.37,30,57.14,347,synthetic_demo,未执行
+SC03,DEMO-SC03,覆盖优先,产能保障,baseline-demand,稳定需求,100.0,672.0,672.0,0,100.0,5709.0,5376.0,333.0,5.83,205642.5,306.02,11.771,38.62,100.0,0.0396,20.5,3.63,30,100.0,0,synthetic_demo,未执行
+SC04,DEMO-SC04,公平优先,员工公平,baseline-demand,稳定需求,95.0,672.0,638.0,34.0,94.94,5104.0,5104.0,0.0,0.0,178640.0,280.0,12.5,34.52,88.31,0.0313,16.0,4.6,30,100.0,0,synthetic_demo,未执行
+SC05,DEMO-SC05,技能优先,技能匹配,baseline-demand,稳定需求,94.0,672.0,632.0,40.0,94.05,5152.0,5056.0,96.0,1.86,182000.0,287.97,12.267,54.76,86.95,0.3408,93.0,4.13,30,100.0,0,synthetic_demo,未执行
+SC06,DEMO-SC06,低加班,工时风险,baseline-demand,稳定需求,91.0,672.0,612.0,60.0,91.07,4896.0,4896.0,0.0,0.0,171360.0,280.0,12.5,33.12,85.24,0.0499,8.0,4.3,30,100.0,0,synthetic_demo,未执行
+SC07,DEMO-SC07,夜班保障,班次保障,baseline-demand,稳定需求,98.0,672.0,659.0,13.0,98.07,7085.0,5272.0,1813.0,25.59,279702.5,424.43,9.301,54.53,92.64,0.1253,68.0,3.67,30,85.71,14,synthetic_demo,未执行
+SC08,DEMO-SC08,突发缺勤,异常应急,baseline-demand,每条线减少 3 名可用员工,84.0,672.0,564.0,108.0,83.93,6690.0,4512.0,2178.0,32.56,272265.0,482.74,8.43,124.44,78.37,0.1411,142.0,2.67,30,28.57,878,synthetic_demo,未执行
+SC09,DEMO-SC09,换型应急,生产切换,baseline-demand,换型作业增多,90.0,672.0,605.0,67.0,90.03,5141.5,4840.0,301.5,5.86,185228.75,306.16,11.767,57.38,82.04,0.3262,98.5,3.63,30,85.71,45,synthetic_demo,未执行
+SC10,DEMO-SC10,多技能补位,跨岗协同,baseline-demand,稳定需求,97.0,672.0,652.0,20.0,97.02,5304.0,5216.0,88.0,1.66,187180.0,287.09,12.293,59.95,89.94,0.277,94.0,4.47,30,100.0,0,synthetic_demo,未执行
+SC11,DEMO-SC11,旺季增产,需求变化,peak-demand,基准需求增加 15%,91.0,773.0,703.0,70.0,90.94,7564.0,5624.0,1940.0,25.65,298690.0,424.88,9.294,51.16,86.04,0.0485,15.0,3.67,30,85.71,13,synthetic_demo,未执行
+SC12,DEMO-SC12,备用产能,产能韧性,baseline-demand,可用人员储备,93.0,672.0,625.0,47.0,93.01,5316.5,5000.0,316.5,5.95,191616.25,306.59,11.756,63.29,86.58,0.2696,98.5,4.0,30,100.0,0,synthetic_demo,未执行

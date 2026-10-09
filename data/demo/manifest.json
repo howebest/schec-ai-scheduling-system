@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "dataset_version": "synthetic-demo-20260930-v1",
+  "source_type": "synthetic_demo",
+  "generator": "scripts/generate_demo_data.py",
+  "generator_version": "1.0.0",
+  "seed": 20260930,
+  "generated_at": "2026-09-30T00:00:00+08:00",
+  "units": {
+    "time": "h",
+    "quantity": "unit",
+    "efficiency": "%"
+  },
+  "planning_period_days": 14,
+  "files": {
+    "orders.csv": {
+      "source_type": "synthetic_demo",
+      "sha256": "a466eedec6b4f7a4741e3afc212d92862ee5fe5dc7bf18eeb5fa33124292f729",
+      "row_count": 48,
+      "columns": [
+        "order_id",
+        "line_code",
+        "product_code",
+        "required_units",
+        "due_at",
+        "priority"
+      ],
+      "usage": "订单交期与需求量分析；不进入当前 MIP 求解模型"
+    },
+    "line_capacity.csv": {
+      "source_type": "synthetic_demo",
+      "sha256": "f43d9f556184738b8b961bfdab1d3005f8a56238147ff8ebef0ab7ed83b1da3b",
+      "row_count": 16,
+      "columns": [
+        "line_code",
+        "product_code",
+        "units_per_hour",
+        "efficiency_pct",
+        "available_hours",
+        "shift_code"
+      ],
+      "usage": "产线速度与效率敏感性分析；不进入当前 MIP 求解模型"
+    },
+    "attendance_snapshot.csv": {
+      "source_type": "synthetic_demo",
+      "sha256": "4ab2148315b06d13df32a06497c4f836a99093397f991007e846959e8a8872d9",
+      "row_count": 560,
+      "columns": [
+        "employee_id",
+        "schedule_date",
+        "shift_code",
+        "status",
+        "source_type"
+      ],
+      "usage": "本机模拟现场快照；不代表真实考勤"
+    }
+  },
+  "limitations": [
+    "这些记录为固定随机种子生成的合成演示数据。",
+    "订单、线速、效率和产能字段用于看板与敏感性分析，不参与现有排班 MIP 决策。",
+    "员工编号为演示编号，不对应真实员工。"
+  ]
+}

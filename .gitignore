@@ -1,0 +1,31 @@
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+backend/target/
+bin/scheduling-service
+vendor/python/macos-arm64-cp311/
+vendor/python/wheelhouse-macos-arm64-cp311/
+data/runtime/
+data/imported/
+out/jobs/
+out/import-previews/
+logs/
+__pycache__/
+*.py[cod]
+
+# Machine-local files and generated work products.
+**/.DS_Store
+/out/
+/projects/
+/.superpowers/
+/docs/superpowers/
+/config/app.json
+*.sqlite
+*.sqlite3
+*.db
+
+# Customer source documents remain in the local project folder; the application
+# manuals and API/operations documentation under docs/ are published.
+/*.docx
+/*.xlsx
+/*.html

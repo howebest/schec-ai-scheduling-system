@@ -1,0 +1,6492 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-demo-expanded-20261008-v1",
+  "seed_version": 4,
+  "source_type": "synthetic_demo",
+  "positions": [
+    {
+      "position_id": "POS-FILL",
+      "name": "灌注机岗",
+      "category": "生产操作"
+    },
+    {
+      "position_id": "POS-BLOW",
+      "name": "吹贴机岗",
+      "category": "生产操作"
+    },
+    {
+      "position_id": "POS-ASEPTIC",
+      "name": "无菌操作岗",
+      "category": "生产操作"
+    },
+    {
+      "position_id": "POS-PALLET",
+      "name": "码垛机岗",
+      "category": "包装操作"
+    },
+    {
+      "position_id": "POS-PACK",
+      "name": "塑包机岗",
+      "category": "包装操作"
+    },
+    {
+      "position_id": "POS-QUALITY",
+      "name": "质量抽检岗",
+      "category": "质量管理"
+    },
+    {
+      "position_id": "POS-CHANGEOVER",
+      "name": "换型操作岗",
+      "category": "生产支持"
+    },
+    {
+      "position_id": "POS-LOGISTICS",
+      "name": "物料配送岗",
+      "category": "生产支持"
+    }
+  ],
+  "skills": [
+    {
+      "code": "SKILL-CORE",
+      "name": "核心设备操作",
+      "category": "设备操作",
+      "description": "按员工主岗位记录核心设备操作能力评分。"
+    },
+    {
+      "code": "SKILL-SAFETY",
+      "name": "安全规程",
+      "category": "安全与合规",
+      "description": "按统一评分口径记录安全规程执行能力。"
+    },
+    {
+      "code": "SKILL-QUALITY",
+      "name": "质量抽检",
+      "category": "质量管理",
+      "description": "记录抽样、外观和质量异常处置能力。"
+    },
+    {
+      "code": "SKILL-CHANGEOVER",
+      "name": "产品换型",
+      "category": "生产支持",
+      "description": "记录换型准备、操作和复位能力。"
+    },
+    {
+      "code": "SKILL-CIP",
+      "name": "清洗消毒",
+      "category": "食品安全",
+      "description": "记录清洗消毒作业能力；不代表证书核验。"
+    },
+    {
+      "code": "SKILL-MAINTENANCE",
+      "name": "设备点检",
+      "category": "设备维护",
+      "description": "记录日常点检和异常上报能力。"
+    },
+    {
+      "code": "SKILL-5S",
+      "name": "现场整理",
+      "category": "现场管理",
+      "description": "记录现场整理、清洁和交接能力。"
+    },
+    {
+      "code": "SKILL-HANDOVER",
+      "name": "班次交接",
+      "category": "协同管理",
+      "description": "记录班前、班后信息交接能力。"
+    },
+    {
+      "code": "SKILL-PACKAGING",
+      "name": "包装作业",
+      "category": "包装操作",
+      "description": "记录包装设备与包装物料作业能力。"
+    },
+    {
+      "code": "SKILL-AUTOMATION",
+      "name": "自动化设备操作",
+      "category": "设备操作",
+      "description": "记录自动化设备人机操作能力。"
+    },
+    {
+      "code": "SKILL-MATERIAL",
+      "name": "物料配送",
+      "category": "生产支持",
+      "description": "记录生产物料配送与批次核对能力。"
+    },
+    {
+      "code": "SKILL-EMERGENCY",
+      "name": "异常应急处置",
+      "category": "安全与合规",
+      "description": "记录异常识别、报告和初步处置能力。"
+    }
+  ],
+  "team_catalog": [
+    {
+      "team_id": "DEMO-TEAM-PET-01-1",
+      "name": "PET-01 甲班",
+      "team_category": "轮转生产班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-01-2",
+      "name": "PET-01 乙班",
+      "team_category": "轮转生产班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-01-3",
+      "name": "PET-01 丙班",
+      "team_category": "轮转生产班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-01-X01",
+      "name": "PET-01 增援班组",
+      "team_category": "增援班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-01-X02",
+      "name": "PET-01 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-01-X03",
+      "name": "PET-01 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-01-X04",
+      "name": "PET-01 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-1",
+      "name": "PET-02 甲班",
+      "team_category": "轮转生产班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-2",
+      "name": "PET-02 乙班",
+      "team_category": "轮转生产班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-3",
+      "name": "PET-02 丙班",
+      "team_category": "轮转生产班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-X01",
+      "name": "PET-02 增援班组",
+      "team_category": "增援班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-X02",
+      "name": "PET-02 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-X03",
+      "name": "PET-02 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-X04",
+      "name": "PET-02 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-1",
+      "name": "PET-03 甲班",
+      "team_category": "轮转生产班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-2",
+      "name": "PET-03 乙班",
+      "team_category": "轮转生产班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-3",
+      "name": "PET-03 丙班",
+      "team_category": "轮转生产班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-X01",
+      "name": "PET-03 增援班组",
+      "team_category": "增援班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-X02",
+      "name": "PET-03 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-X03",
+      "name": "PET-03 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-X04",
+      "name": "PET-03 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-1",
+      "name": "无菌线-A 甲班",
+      "team_category": "轮转生产班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-2",
+      "name": "无菌线-A 乙班",
+      "team_category": "轮转生产班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-3",
+      "name": "无菌线-A 丙班",
+      "team_category": "轮转生产班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X01",
+      "name": "无菌线-A 增援班组",
+      "team_category": "增援班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X02",
+      "name": "无菌线-A 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X03",
+      "name": "无菌线-A 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X04",
+      "name": "无菌线-A 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-1",
+      "name": "无菌线-B 甲班",
+      "team_category": "轮转生产班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-2",
+      "name": "无菌线-B 乙班",
+      "team_category": "轮转生产班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-3",
+      "name": "无菌线-B 丙班",
+      "team_category": "轮转生产班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X01",
+      "name": "无菌线-B 增援班组",
+      "team_category": "增援班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X02",
+      "name": "无菌线-B 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X03",
+      "name": "无菌线-B 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X04",
+      "name": "无菌线-B 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-1",
+      "name": "无菌线-C 甲班",
+      "team_category": "轮转生产班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-2",
+      "name": "无菌线-C 乙班",
+      "team_category": "轮转生产班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-3",
+      "name": "无菌线-C 丙班",
+      "team_category": "轮转生产班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X01",
+      "name": "无菌线-C 增援班组",
+      "team_category": "增援班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X02",
+      "name": "无菌线-C 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X03",
+      "name": "无菌线-C 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X04",
+      "name": "无菌线-C 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    }
+  ],
+  "teams": [
+    {
+      "team_id": "DEMO-TEAM-PET-01-X01",
+      "name": "PET-01 增援班组",
+      "team_category": "增援班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-01-X02",
+      "name": "PET-01 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-01-X03",
+      "name": "PET-01 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-01-X04",
+      "name": "PET-01 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-01"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-X01",
+      "name": "PET-02 增援班组",
+      "team_category": "增援班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-X02",
+      "name": "PET-02 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-X03",
+      "name": "PET-02 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-02-X04",
+      "name": "PET-02 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-02"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-X01",
+      "name": "PET-03 增援班组",
+      "team_category": "增援班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-X02",
+      "name": "PET-03 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-X03",
+      "name": "PET-03 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-PET-03-X04",
+      "name": "PET-03 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "primary_position_id": "POS-FILL",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "PET-03"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X01",
+      "name": "无菌线-A 增援班组",
+      "team_category": "增援班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X02",
+      "name": "无菌线-A 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X03",
+      "name": "无菌线-A 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X04",
+      "name": "无菌线-A 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-A"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X01",
+      "name": "无菌线-B 增援班组",
+      "team_category": "增援班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X02",
+      "name": "无菌线-B 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X03",
+      "name": "无菌线-B 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X04",
+      "name": "无菌线-B 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-B"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X01",
+      "name": "无菌线-C 增援班组",
+      "team_category": "增援班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X02",
+      "name": "无菌线-C 技能协同班组",
+      "team_category": "技能协同班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X03",
+      "name": "无菌线-C 夜班保障班组",
+      "team_category": "夜班保障班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    },
+    {
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X04",
+      "name": "无菌线-C 机动替班班组",
+      "team_category": "机动替班班组",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "primary_position_id": "POS-ASEPTIC",
+      "description": "本机合成扩充班组；成员、技能和资格均由固定规则生成。",
+      "source_type": "synthetic_demo",
+      "line_name": "无菌线-C"
+    }
+  ],
+  "employees": [
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X01-01",
+      "name": "王志强",
+      "team_id": "DEMO-TEAM-PET-01-X01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 61.0,
+      "seniority_years": 5,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 68.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 86.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 72.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X01-02",
+      "name": "王建华",
+      "team_id": "DEMO-TEAM-PET-01-X01",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 71.0,
+      "seniority_years": 11,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 63.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 91.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X01-03",
+      "name": "王明远",
+      "team_id": "DEMO-TEAM-PET-01-X01",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 85.0,
+      "seniority_years": 5,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 96.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 88.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 78.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 75.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X01-04",
+      "name": "王燕玲",
+      "team_id": "DEMO-TEAM-PET-01-X01",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 64.0,
+      "seniority_years": 13,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 86.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 59.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X02-01",
+      "name": "王晓峰",
+      "team_id": "DEMO-TEAM-PET-01-X02",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 84.0,
+      "seniority_years": 15,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 63.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 92.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 69.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL",
+        "POS-QUALITY"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X02-02",
+      "name": "王佳怡",
+      "team_id": "DEMO-TEAM-PET-01-X02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 78.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 94.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 98.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 99.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW",
+        "POS-QUALITY"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X02-03",
+      "name": "王浩然",
+      "team_id": "DEMO-TEAM-PET-01-X02",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 74.0,
+      "seniority_years": 1,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 88.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 84.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X02-04",
+      "name": "王雨欣",
+      "team_id": "DEMO-TEAM-PET-01-X02",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 63.0,
+      "seniority_years": 13,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 72.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 91.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 92.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 86.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 98.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER",
+        "POS-QUALITY"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X03-01",
+      "name": "李志强",
+      "team_id": "DEMO-TEAM-PET-01-X03",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 69.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 65.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 97.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 76.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X03-02",
+      "name": "李建华",
+      "team_id": "DEMO-TEAM-PET-01-X03",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 78.0,
+      "seniority_years": 8,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 63.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X03-03",
+      "name": "李明远",
+      "team_id": "DEMO-TEAM-PET-01-X03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 71.0,
+      "seniority_years": 14,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 85.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 68.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 68.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 87.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X03-04",
+      "name": "李燕玲",
+      "team_id": "DEMO-TEAM-PET-01-X03",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 85.0,
+      "seniority_years": 2,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 73.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 76.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 84.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X04-01",
+      "name": "李晓峰",
+      "team_id": "DEMO-TEAM-PET-01-X04",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 94.0,
+      "seniority_years": 1,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 64.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 97.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 60.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X04-02",
+      "name": "李佳怡",
+      "team_id": "DEMO-TEAM-PET-01-X04",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 64.0,
+      "seniority_years": 1,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 81.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 91.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 97.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X04-03",
+      "name": "李浩然",
+      "team_id": "DEMO-TEAM-PET-01-X04",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 74.0,
+      "seniority_years": 13,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 76.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 69.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 100.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 83.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-01-X04-04",
+      "name": "李雨欣",
+      "team_id": "DEMO-TEAM-PET-01-X04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-01",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 74.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 64.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-01",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X01-01",
+      "name": "张志强",
+      "team_id": "DEMO-TEAM-PET-02-X01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 90.0,
+      "seniority_years": 6,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 62.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 74.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 71.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X01-02",
+      "name": "张建华",
+      "team_id": "DEMO-TEAM-PET-02-X01",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 77.0,
+      "seniority_years": 10,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 98.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 83.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X01-03",
+      "name": "张明远",
+      "team_id": "DEMO-TEAM-PET-02-X01",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 76.0,
+      "seniority_years": 9,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 94.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 75.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X01-04",
+      "name": "张燕玲",
+      "team_id": "DEMO-TEAM-PET-02-X01",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 58.0,
+      "seniority_years": 2,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 89.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 90.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X02-01",
+      "name": "张晓峰",
+      "team_id": "DEMO-TEAM-PET-02-X02",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 96.0,
+      "seniority_years": 3,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 96.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 81.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL",
+        "POS-QUALITY"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X02-02",
+      "name": "张佳怡",
+      "team_id": "DEMO-TEAM-PET-02-X02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 71.0,
+      "seniority_years": 3,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 89.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 72.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 67.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW",
+        "POS-QUALITY"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X02-03",
+      "name": "张浩然",
+      "team_id": "DEMO-TEAM-PET-02-X02",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 62.0,
+      "seniority_years": 5,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 78.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 72.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X02-04",
+      "name": "张雨欣",
+      "team_id": "DEMO-TEAM-PET-02-X02",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 91.0,
+      "seniority_years": 4,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 64.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 86.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 65.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 74.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER",
+        "POS-QUALITY"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X03-01",
+      "name": "刘志强",
+      "team_id": "DEMO-TEAM-PET-02-X03",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 75.0,
+      "seniority_years": 6,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 65.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 63.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X03-02",
+      "name": "刘建华",
+      "team_id": "DEMO-TEAM-PET-02-X03",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 72.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 72.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 89.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X03-03",
+      "name": "刘明远",
+      "team_id": "DEMO-TEAM-PET-02-X03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 77.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 91.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 70.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X03-04",
+      "name": "刘燕玲",
+      "team_id": "DEMO-TEAM-PET-02-X03",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 79.0,
+      "seniority_years": 13,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 67.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 65.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 73.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 98.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 61.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X04-01",
+      "name": "刘晓峰",
+      "team_id": "DEMO-TEAM-PET-02-X04",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 85.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 89.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 64.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 73.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X04-02",
+      "name": "刘佳怡",
+      "team_id": "DEMO-TEAM-PET-02-X04",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 87.0,
+      "seniority_years": 9,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 94.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 81.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 84.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X04-03",
+      "name": "刘浩然",
+      "team_id": "DEMO-TEAM-PET-02-X04",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 68.0,
+      "seniority_years": 8,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 62.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 75.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-02-X04-04",
+      "name": "刘雨欣",
+      "team_id": "DEMO-TEAM-PET-02-X04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-02",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 75.0,
+      "seniority_years": 6,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 73.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 62.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 100.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-02",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X01-01",
+      "name": "陈志强",
+      "team_id": "DEMO-TEAM-PET-03-X01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 68.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 96.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 86.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X01-02",
+      "name": "陈建华",
+      "team_id": "DEMO-TEAM-PET-03-X01",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 69.0,
+      "seniority_years": 3,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 59.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X01-03",
+      "name": "陈明远",
+      "team_id": "DEMO-TEAM-PET-03-X01",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 62.0,
+      "seniority_years": 15,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 73.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 85.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 72.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 79.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X01-04",
+      "name": "陈燕玲",
+      "team_id": "DEMO-TEAM-PET-03-X01",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 82.0,
+      "seniority_years": 11,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 84.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 88.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 88.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X02-01",
+      "name": "陈晓峰",
+      "team_id": "DEMO-TEAM-PET-03-X02",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 72.0,
+      "seniority_years": 12,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 81.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL",
+        "POS-QUALITY"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X02-02",
+      "name": "陈佳怡",
+      "team_id": "DEMO-TEAM-PET-03-X02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 72.0,
+      "seniority_years": 2,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 65.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 69.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 64.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 97.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW",
+        "POS-QUALITY"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X02-03",
+      "name": "陈浩然",
+      "team_id": "DEMO-TEAM-PET-03-X02",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 75.0,
+      "seniority_years": 7,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 89.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 65.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 63.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 75.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X02-04",
+      "name": "陈雨欣",
+      "team_id": "DEMO-TEAM-PET-03-X02",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 66.0,
+      "seniority_years": 8,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 91.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 91.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 69.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER",
+        "POS-QUALITY"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X03-01",
+      "name": "杨志强",
+      "team_id": "DEMO-TEAM-PET-03-X03",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 76.0,
+      "seniority_years": 1,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 69.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 62.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 59.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X03-02",
+      "name": "杨建华",
+      "team_id": "DEMO-TEAM-PET-03-X03",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 77.0,
+      "seniority_years": 8,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 74.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 93.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 94.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 85.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X03-03",
+      "name": "杨明远",
+      "team_id": "DEMO-TEAM-PET-03-X03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 96.0,
+      "seniority_years": 6,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 100.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 67.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 89.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 69.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 75.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X03-04",
+      "name": "杨燕玲",
+      "team_id": "DEMO-TEAM-PET-03-X03",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 80.0,
+      "seniority_years": 8,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 100.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 68.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 68.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X04-01",
+      "name": "杨晓峰",
+      "team_id": "DEMO-TEAM-PET-03-X04",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 78.0,
+      "seniority_years": 6,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 78.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 74.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 97.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 88.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-FILL"
+      ],
+      "position_name": "灌注机岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X04-02",
+      "name": "杨佳怡",
+      "team_id": "DEMO-TEAM-PET-03-X04",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 81.0,
+      "seniority_years": 7,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 93.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 98.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 72.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 65.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-BLOW"
+      ],
+      "position_name": "吹贴机岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X04-03",
+      "name": "杨浩然",
+      "team_id": "DEMO-TEAM-PET-03-X04",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 75.0,
+      "seniority_years": 5,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 96.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 97.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 94.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-PET-03-X04-04",
+      "name": "杨雨欣",
+      "team_id": "DEMO-TEAM-PET-03-X04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-03",
+      "factory_code": "HB",
+      "factory_name": "河北厂",
+      "collaboration_score": 61.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 94.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 85.0
+        },
+        {
+          "skill_code": "SKILL-CHANGEOVER",
+          "skill_name": "产品换型",
+          "skill_score": 89.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 64.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 96.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 61.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-CHANGEOVER"
+      ],
+      "position_name": "换型操作岗",
+      "line_name": "PET-03",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-01",
+      "name": "赵志强",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 83.0,
+      "seniority_years": 14,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 80.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 100.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-02",
+      "name": "赵建华",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X01",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 65.0,
+      "seniority_years": 7,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 100.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-03",
+      "name": "赵明远",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X01",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 83.0,
+      "seniority_years": 6,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 73.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 64.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 65.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 92.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 86.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X01-04",
+      "name": "赵燕玲",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X01",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 94.0,
+      "seniority_years": 10,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 86.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-01",
+      "name": "赵晓峰",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X02",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 77.0,
+      "seniority_years": 6,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 63.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 62.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 91.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC",
+        "POS-QUALITY"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-02",
+      "name": "赵佳怡",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 68.0,
+      "seniority_years": 3,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 96.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 73.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 73.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 80.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK",
+        "POS-QUALITY"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-03",
+      "name": "赵浩然",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X02",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 82.0,
+      "seniority_years": 14,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 81.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 74.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 76.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 58.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X02-04",
+      "name": "赵雨欣",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X02",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 69.0,
+      "seniority_years": 13,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 95.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 96.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 67.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 88.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 64.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS",
+        "POS-QUALITY"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-01",
+      "name": "黄志强",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X03",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 91.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 81.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 63.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 63.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-02",
+      "name": "黄建华",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X03",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 71.0,
+      "seniority_years": 6,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 97.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 80.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 80.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-03",
+      "name": "黄明远",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 85.0,
+      "seniority_years": 12,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 74.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 97.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 78.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 58.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X03-04",
+      "name": "黄燕玲",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X03",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 81.0,
+      "seniority_years": 9,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 84.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 92.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 75.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-01",
+      "name": "黄晓峰",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X04",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 59.0,
+      "seniority_years": 12,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 93.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 84.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 95.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 97.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-02",
+      "name": "黄佳怡",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X04",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 86.0,
+      "seniority_years": 6,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 81.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 69.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 78.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-03",
+      "name": "黄浩然",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X04",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 83.0,
+      "seniority_years": 13,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 78.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 98.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 68.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-A-X04-04",
+      "name": "黄雨欣",
+      "team_id": "DEMO-TEAM-ASEPTIC-A-X04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-A",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 68.0,
+      "seniority_years": 9,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 78.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 80.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 62.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-A",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X01-01",
+      "name": "周志强",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 72.0,
+      "seniority_years": 7,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 63.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 92.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 83.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X01-02",
+      "name": "周建华",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X01",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 70.0,
+      "seniority_years": 3,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 84.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 84.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X01-03",
+      "name": "周明远",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X01",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 64.0,
+      "seniority_years": 3,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 94.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 88.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 84.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X01-04",
+      "name": "周燕玲",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X01",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 70.0,
+      "seniority_years": 3,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 92.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 72.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 81.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 69.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-01",
+      "name": "周晓峰",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X02",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 75.0,
+      "seniority_years": 8,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 73.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 80.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 87.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC",
+        "POS-QUALITY"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-02",
+      "name": "周佳怡",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 59.0,
+      "seniority_years": 9,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 81.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 93.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 65.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 64.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK",
+        "POS-QUALITY"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-03",
+      "name": "周浩然",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X02",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 92.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 64.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 65.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 78.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 91.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X02-04",
+      "name": "周雨欣",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X02",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 67.0,
+      "seniority_years": 7,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 62.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 74.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 74.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 74.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 88.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 80.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 89.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS",
+        "POS-QUALITY"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-01",
+      "name": "吴志强",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X03",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 61.0,
+      "seniority_years": 7,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 84.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 93.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 91.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-02",
+      "name": "吴建华",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X03",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 70.0,
+      "seniority_years": 3,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 92.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 85.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-03",
+      "name": "吴明远",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 62.0,
+      "seniority_years": 5,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 69.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 88.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 68.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 100.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 94.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X03-04",
+      "name": "吴燕玲",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X03",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 78.0,
+      "seniority_years": 11,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 63.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 86.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 65.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-01",
+      "name": "吴晓峰",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X04",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 85.0,
+      "seniority_years": 2,
+      "night_eligible": false,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 98.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 91.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 67.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 89.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-02",
+      "name": "吴佳怡",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X04",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 66.0,
+      "seniority_years": 14,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 73.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 67.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 80.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 76.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-03",
+      "name": "吴浩然",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X04",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 90.0,
+      "seniority_years": 6,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 72.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 94.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 58.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-B-X04-04",
+      "name": "吴雨欣",
+      "team_id": "DEMO-TEAM-ASEPTIC-B-X04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-B",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 80.0,
+      "seniority_years": 7,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 77.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 89.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-B",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-01",
+      "name": "徐志强",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 76.0,
+      "seniority_years": 15,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 86.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 91.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 99.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-02",
+      "name": "徐建华",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X01",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 79.0,
+      "seniority_years": 12,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 85.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 97.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 77.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-03",
+      "name": "徐明远",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X01",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 87.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 78.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 72.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X01-04",
+      "name": "徐燕玲",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X01",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 98.0,
+      "seniority_years": 2,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 78.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 63.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 97.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-01",
+      "name": "徐晓峰",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X02",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 68.0,
+      "seniority_years": 13,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 76.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 69.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC",
+        "POS-QUALITY"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-02",
+      "name": "徐佳怡",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 73.0,
+      "seniority_years": 3,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 59.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 89.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 89.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 58.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 93.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 58.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK",
+        "POS-QUALITY"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-03",
+      "name": "徐浩然",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X02",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 89.0,
+      "seniority_years": 2,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 63.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 86.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 88.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X02-04",
+      "name": "徐雨欣",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X02",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 84.0,
+      "seniority_years": 10,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 88.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 97.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 98.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 85.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 93.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS",
+        "POS-QUALITY"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-01",
+      "name": "孙志强",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X03",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 97.0,
+      "seniority_years": 7,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 81.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 76.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 86.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 60.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-02",
+      "name": "孙建华",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X03",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 96.0,
+      "seniority_years": 5,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 82.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 79.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 60.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-03",
+      "name": "孙明远",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 99.0,
+      "seniority_years": 4,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 64.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 69.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 66.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 74.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 60.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 81.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X03-04",
+      "name": "孙燕玲",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X03",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 69.0,
+      "seniority_years": 13,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 98.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 100.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 68.0
+        },
+        {
+          "skill_code": "SKILL-AUTOMATION",
+          "skill_name": "自动化设备操作",
+          "skill_score": 60.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-01",
+      "name": "孙晓峰",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X04",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 73.0,
+      "seniority_years": 11,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 67.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 75.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 99.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 88.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 95.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-ASEPTIC"
+      ],
+      "position_name": "无菌操作岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-02",
+      "name": "孙佳怡",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X04",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 89.0,
+      "seniority_years": 6,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 71.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 64.0
+        },
+        {
+          "skill_code": "SKILL-PACKAGING",
+          "skill_name": "包装作业",
+          "skill_score": 89.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 87.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 69.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 84.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-PACK"
+      ],
+      "position_name": "塑包机岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-03",
+      "name": "孙浩然",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X04",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 74.0,
+      "seniority_years": 7,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 72.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 70.0
+        },
+        {
+          "skill_code": "SKILL-QUALITY",
+          "skill_name": "质量抽检",
+          "skill_score": 61.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 83.0
+        },
+        {
+          "skill_code": "SKILL-CIP",
+          "skill_name": "清洗消毒",
+          "skill_score": 93.0
+        },
+        {
+          "skill_code": "SKILL-EMERGENCY",
+          "skill_name": "异常应急处置",
+          "skill_score": 79.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-QUALITY"
+      ],
+      "position_name": "质量抽检岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    },
+    {
+      "employee_id": "DEMO-XEMP-ASEPTIC-C-X04-04",
+      "name": "孙雨欣",
+      "team_id": "DEMO-TEAM-ASEPTIC-C-X04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-C",
+      "factory_code": "SX",
+      "factory_name": "陕西厂",
+      "collaboration_score": 78.0,
+      "seniority_years": 13,
+      "night_eligible": true,
+      "source_type": "synthetic_demo",
+      "skills": [
+        {
+          "skill_code": "SKILL-CORE",
+          "skill_name": "核心设备操作",
+          "skill_score": 72.0
+        },
+        {
+          "skill_code": "SKILL-SAFETY",
+          "skill_name": "安全规程",
+          "skill_score": 100.0
+        },
+        {
+          "skill_code": "SKILL-MATERIAL",
+          "skill_name": "物料配送",
+          "skill_score": 95.0
+        },
+        {
+          "skill_code": "SKILL-HANDOVER",
+          "skill_name": "班次交接",
+          "skill_score": 95.0
+        },
+        {
+          "skill_code": "SKILL-5S",
+          "skill_name": "现场整理",
+          "skill_score": 90.0
+        },
+        {
+          "skill_code": "SKILL-MAINTENANCE",
+          "skill_name": "设备点检",
+          "skill_score": 61.0
+        }
+      ],
+      "qualification_position_ids": [
+        "POS-LOGISTICS"
+      ],
+      "position_name": "物料配送岗",
+      "line_name": "无菌线-C",
+      "employment_status": "在岗"
+    }
+  ],
+  "qualifications": [
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X01-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X01-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X01-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X01-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X01-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X01-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X01-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X01-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-01-X01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-01-X01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X02-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X02-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X02-01-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X02-01",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X02-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X02-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X02-02-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X02-02",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X02-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X02-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X02-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X02-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X02-04-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X02-04",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-01-X02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-01-X02",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X03-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X03-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X03-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X03-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X03-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X03-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X03-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X03-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-01-X03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-01-X03",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X04-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X04-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X04-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X04-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X04-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X04-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-01-X04-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-01-X04-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-01",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-01-X04",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-01-X04",
+      "position_id": "POS-FILL",
+      "line_id": "PET-01",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X01-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X01-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X01-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X01-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X01-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X01-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X01-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X01-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-02-X01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-02-X01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X02-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X02-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X02-01-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X02-01",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X02-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X02-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X02-02-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X02-02",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X02-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X02-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X02-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X02-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X02-04-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X02-04",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-02-X02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-02-X02",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X03-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X03-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X03-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X03-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X03-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X03-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X03-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X03-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-02-X03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-02-X03",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X04-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X04-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X04-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X04-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X04-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X04-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-02-X04-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-02-X04-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-02",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-02-X04",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-02-X04",
+      "position_id": "POS-FILL",
+      "line_id": "PET-02",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X01-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X01-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X01-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X01-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X01-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X01-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X01-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X01-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-03-X01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-03-X01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X02-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X02-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X02-01-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X02-01",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X02-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X02-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X02-02-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X02-02",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X02-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X02-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X02-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X02-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X02-04-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X02-04",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-03-X02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-03-X02",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X03-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X03-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X03-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X03-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X03-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X03-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X03-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X03-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-03-X03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-03-X03",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X04-01-POS-FILL",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X04-01",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X04-02-POS-BLOW",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X04-02",
+      "position_id": "POS-BLOW",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X04-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X04-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-PET-03-X04-04-POS-CHANGEOVER",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-PET-03-X04-04",
+      "position_id": "POS-CHANGEOVER",
+      "line_id": "PET-03",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-PET-03-X04",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-03-X04",
+      "position_id": "POS-FILL",
+      "line_id": "PET-03",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X01-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X01-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X01-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X01-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X01-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X01-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X01-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X01-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-A-X01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-A-X01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X02-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X02-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X02-01-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X02-01",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X02-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X02-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X02-02-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X02-02",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X02-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X02-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X02-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X02-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X02-04-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X02-04",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-A-X02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-A-X02",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X03-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X03-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X03-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X03-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X03-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X03-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X03-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X03-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-A-X03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-A-X03",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X04-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X04-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X04-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X04-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X04-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X04-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-A-X04-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-A-X04-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-A",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-A-X04",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-A-X04",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-A",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X01-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X01-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X01-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X01-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X01-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X01-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X01-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X01-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-B-X01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-B-X01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X02-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X02-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X02-01-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X02-01",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X02-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X02-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X02-02-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X02-02",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X02-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X02-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X02-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X02-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X02-04-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X02-04",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-B-X02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-B-X02",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X03-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X03-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X03-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X03-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X03-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X03-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X03-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X03-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-B-X03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-B-X03",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X04-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X04-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X04-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X04-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X04-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X04-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-B-X04-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-B-X04-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-B",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-B-X04",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-B-X04",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-B",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X01-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X01-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X01-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X01-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X01-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X01-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X01-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X01-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-C-X01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-C-X01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X02-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X02-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X02-01-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X02-01",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X02-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X02-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X02-02-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X02-02",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X02-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X02-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X02-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X02-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X02-04-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X02-04",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-C-X02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-C-X02",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X03-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X03-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X03-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X03-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X03-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X03-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X03-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X03-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-C-X03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-C-X03",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "description": "本机合成演示班组岗位资格关系。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X04-01-POS-ASEPTIC",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X04-01",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X04-02-POS-PACK",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X04-02",
+      "position_id": "POS-PACK",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X04-03-POS-QUALITY",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X04-03",
+      "position_id": "POS-QUALITY",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-XEMP-ASEPTIC-C-X04-04-POS-LOGISTICS",
+      "object_type": "employee",
+      "object_id": "DEMO-XEMP-ASEPTIC-C-X04-04",
+      "position_id": "POS-LOGISTICS",
+      "line_id": "ASEPTIC-C",
+      "description": "由合成演示技能关系生成；不代表外部证书核验。"
+    },
+    {
+      "qualification_id": "DEMO-QUAL-DEMO-TEAM-ASEPTIC-C-X04",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-C-X04",
+      "position_id": "POS-ASEPTIC",
+      "line_id": "ASEPTIC-C",
+      "description": "本机合成演示班组岗位资格关系。"
+    }
+  ],
+  "config_targets": [
+    {
+      "config_id": "DEMO-CONFIG-PET-01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-01-X01",
+      "offset_days": 3
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-01-X02",
+      "offset_days": 4
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-01-X03",
+      "offset_days": 5
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-01",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-01-X04",
+      "offset_days": 6
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-02-X01",
+      "offset_days": 3
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-02-X02",
+      "offset_days": 4
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-02-X03",
+      "offset_days": 5
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-02",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-02-X04",
+      "offset_days": 6
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-03-X01",
+      "offset_days": 3
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-03-X02",
+      "offset_days": 4
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-03-X03",
+      "offset_days": 5
+    },
+    {
+      "config_id": "DEMO-CONFIG-PET-03",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-PET-03-X04",
+      "offset_days": 6
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-A",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-A-X01",
+      "offset_days": 3
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-A",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-A-X02",
+      "offset_days": 4
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-A",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-A-X03",
+      "offset_days": 5
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-A",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-A-X04",
+      "offset_days": 6
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-B",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-B-X01",
+      "offset_days": 3
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-B",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-B-X02",
+      "offset_days": 4
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-B",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-B-X03",
+      "offset_days": 5
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-B",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-B-X04",
+      "offset_days": 6
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-C",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-C-X01",
+      "offset_days": 3
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-C",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-C-X02",
+      "offset_days": 4
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-C",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-C-X03",
+      "offset_days": 5
+    },
+    {
+      "config_id": "DEMO-CONFIG-ASEPTIC-C",
+      "object_type": "team",
+      "object_id": "DEMO-TEAM-ASEPTIC-C-X04",
+      "offset_days": 6
+    }
+  ]
+}

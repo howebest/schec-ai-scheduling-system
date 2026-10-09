@@ -1,0 +1,9 @@
+{
+  "event_id": "S3-CHANGEOVER-DEMO",
+  "type": "changeover",
+  "scn_type": "换产",
+  "description": "HB-PET01线2026-07-20白班新增换型（等级B，标准时长1.2h）：该班次缺口惩罚附加20并向非关键岗开放非完整班次人力（M4）",
+  "line": "HB-PET01",
+  "date": "2026-07-20",
+  "shift": "白班"
+}
