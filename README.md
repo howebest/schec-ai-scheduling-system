@@ -58,6 +58,23 @@ GitHub 源码仓库不提交生成的 wheelhouse 和已安装的 vendor 运行�
 
 启动后，在顶栏数据版本中选择“合成演示数据（人员与多方案扩充）”，即可查看方案管理和排班管理分析数据。扩充方案中的满意度、合规规则检查和人工成本均为合成模拟口径，未执行独立核验。字段分类、关联键、方案指标定义和完整数据文件见[本机扩充演示数据目录](docs/demo-data-catalog.md)。
 
+## Streamlit 独立演示页面
+
+仓库根目录的 `streamlit_app.py` 是独立 Streamlit 入口，复用 `src/sched_solver.py` 的 `solve-demo` 求解能力；求解运行于独立 Python 子进程。该页面默认使用 `data/demo/streamlit_demo_dataset.xlsx` 合成演示工作簿，也支持上传 `.xlsx` 文件，设置优化目标、需求调整系数和求解时限，查看 KPI、约束核验及岗位缺口，并下载排班 CSV。演示工作簿由 `scripts/generate_streamlit_demo_workbook.py` 从项目合成数据生成，不包含仓库外的原始工作簿。
+
+在 Streamlit Community Cloud 创建应用时，仓库选择 `howebest/schec-ai-scheduling-system`，分支选择 `main`，入口文件填写 `streamlit_app.py`，高级设置选择 Python 3.11。Cloud 会按根目录 `requirements.txt` 安装 Streamlit、Pyomo、HiGHS 和数据处理依赖。首次部署或更换 Python 主版本时，应在创建应用时设置；Community Cloud 部署后不能直接更换 Python 主版本。
+
+此独立页面仅实现单产线首 7 d 的演示求解，不启动 Rust 服务，也不替代完整 React + Rust 本机工作台。上传的工作簿仅写入临时目录并用于当前求解；文件大小上限为 25 MiB。页面不提供外部 HR、APS、MES 集成，也不将模型目标值解释为货币成本。
+
+本机运行方式：
+
+```sh
+python3.11 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m streamlit run streamlit_app.py
+```
+
 ## 文档与检查
 
 - [用户手册](docs/USER_GUIDE.md)

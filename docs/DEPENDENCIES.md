@@ -34,3 +34,9 @@
 ## 5. 许可证
 
 发行前需在随包 notice 文件中复核并附带 React、Ant Design、Ant Design Icons、ECharts、Python 包、HiGHS 及其传递依赖的许可证文本和 notices。原始数据与方案文件按项目数据授权使用，不随开源依赖许可证分发。
+
+## 6. Streamlit Community Cloud 独立页面
+
+仓库根目录的 `streamlit_app.py` 可作为 Streamlit Community Cloud 的独立入口。Cloud 运行环境为 Linux，应通过根目录 `requirements.txt` 按 PyPI 发行包安装依赖；不得复用 `config/python-lock-macos-arm64-cp311.txt` 中的 macOS arm64 wheel 文件。应用高级设置使用 CPython 3.11，与当前项目锁定的 Python 包版本保持一致。
+
+页面通过子进程调用 `src/sched_solver.py solve-demo`。求解依赖为 Pyomo 6.10.1 和 HiGHS `highspy` 1.15.1；页面依赖 Streamlit 1.65.0、NumPy 2.2.6、pandas 2.2.3 与 openpyxl 3.1.5。Streamlit 子进程隔离 HiGHS 原生库，避免将其加载到页面主进程。
